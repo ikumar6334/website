@@ -22,6 +22,12 @@
       icon: "/svg/brands/discord.svg",
     },
     {
+      href: "https://fosstodon.org/@gitpod",
+      alt: "Mastodon",
+      icon: "/svg/brands/mastodon.svg",
+      rel: "me",
+    },
+    {
       href: "https://www.developerexperience.us",
       alt: "DevX community logo",
       icon: "/svg/brands/devx.svg",
@@ -178,6 +184,7 @@
           <FooterLink
             href={link.href}
             target="_blank"
+            rel={link.rel ?? ""}
             class="hover:opacity-80"
             analytics={`{"variant":"social_media","context":"` +
               link.alt.toLowerCase() +
