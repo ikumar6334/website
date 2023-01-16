@@ -260,6 +260,34 @@ module.exports = {
 
 If you want to use private packages from npm or yarn on Gitpod, you can use the [`NPM_TOKEN`](https://docs.npmjs.com/creating-and-viewing-access-tokens) environment variable. You can set it in your [Gitpod user settings](/docs/configure/projects/environment-variables#using-the-account-settings).
 
+## Debug your JavaScript application in Gitpod
+
+### Debugging JavaScript applications in VS Code
+
+To debug your application, you can use the [VS Code Browser](/docs/references/ides-and-editors/vscode-browser) or [VS Code Desktop](/docs/references/ides-and-editors/vscode) IDE. You can start debugging by clicking the `Debug` button in the IDE's status bar or by pressing `F5` or following the steps below:
+
+![Debugger Option in Gitpod VS Code](.../../../static/images/docs/debugger-option-vscode.webp)
+
+_You Can follow [this official blog](https://code.visualstudio.com/docs/editor/debugging) for more._
+
+### Debugging JavaScript applications in JetBrains IDE (WebStorm)
+
+To debug your application, you can use the [WebStorm](/docs/references/ides-and-editors/webstorm) IDE. You can start debugging by clicking the `Add Configurations` button in the IDE's top status bar.
+
+![Debugger Option in Gitpod WebStorm](.../../../static/images/docs/debugger-option-webstorm.webp)
+
+_You Can follow [this official blog](https://blog.jetbrains.com/webstorm/2018/01/how-to-debug-with-webstorm/) for more._
+
+## Example Repositories
+
+Here are a few JavaScript/TypeScript example projects that are automated with Gitpod:
+
+|                          Repository                          |                                       Description                                       |                                                              Try it                                                               |
+| :----------------------------------------------------------: | :-------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------: |
+|    [Tesseract.js](https://github.com/naptha/tesseract.js)    |                     Pure JavaScript OCR for more than 100 Languages                     |    [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/naptha/tesseract.js)    |
+| [freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) | [freeCodeCamp.org](https://www.freecodecamp.org/)'s open source codebase and curriculum | [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/freeCodeCamp/freeCodeCamp) |
+|     [Mozilla PDF.js](https://github.com/mozilla/pdf.js)      |                     PDF.js is a PDF viewer that is built with HTML5                     |      [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/mozilla/pdf.js)       |
+
 ## Recommended Reading
 
 - [Build Projects in a Gitpod Ephemeral Dev Environment — The Ultimate Guide](/guides/guide-ephemeral-dev-environment-on-gitpod)

@@ -20,7 +20,9 @@ export const pricingPlans: Pricing[] = [
     price: `0`,
     features: [
       "Use Gitpod for free with 500 credits/mo or up to 50 hours",
-      "Upgrade to 1,000 credits for $9/mo. Pay-as-you-go after that",
+      `Upgrade to 1,000 credits for ${
+        isEurope() ? "€" : "$"
+      }9/mo. Pay-as-you-go after that`,
       "Workspace classes, prebuilds, and multi-IDE support",
     ],
     btnText: "Start for free",
@@ -877,7 +879,7 @@ export const pricingFAQ: FAQ = {
     {
       title: "Is Gitpod secure?",
       content:
-        '<p> Gitpod is secure by design and at the heart of what we do. Your source code is safely stored in the cloud, never locally. Each Gitpod workspace and prebuild runs on a secured single-use container providing fast startup times without compromising on security. Learn more at <a href="/security">gitpod.io/security</a>. We are also in the process of receiving the SOC2 compliance report </p>',
+        '<p> Gitpod is secure by design and at the heart of what we do. Your source code is safely stored in the cloud, never locally. Each Gitpod workspace and prebuild runs on a secured single-use container providing fast startup times without compromising on security. Learn more at <a href="/security">gitpod.io/security</a>. Gitpod is SOC 2 Type II certified </p>',
     },
     {
       title: "Still have more questions?",

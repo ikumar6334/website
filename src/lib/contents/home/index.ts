@@ -531,11 +531,11 @@ export const featureTitles: FeatureTitle[] = [
     sub: "faster time from zero to first PR",
   },
   {
-    main: "61%",
-    sub: "cost savings compared to a VDI solution",
+    main: "100%",
+    sub: "of code runs in a secure CDE",
   },
   {
-    main: "750k+",
+    main: "+750k",
     sub: "developers are using Gitpod",
   },
 ];

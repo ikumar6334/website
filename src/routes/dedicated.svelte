@@ -27,10 +27,11 @@
 >
   <Pill slot="annotation" class="align-top" text="soon" variant="pink" />
 </Header>
-<div class="flex justify-center lgx:justify-start items-start mb-xxx-large">
-  <div class="max-w-2xl">
+<div class="flex lgx:justify-start items-start mb-xxx-large">
+  <div class="max-w-2xl justify-left">
     <Hero />
-
+  </div>
+  <div class="max-w-2xl justify-center">
     <Signup class="lgx:hidden mx-auto" toType="dedicated-signup" />
   </div>
   <Signup toType="dedicated-signup" class="hidden lgx:block" />

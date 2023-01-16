@@ -42,7 +42,7 @@
   <Calculator />
 </Section>
 
-<UsedBy title="Used by 750k+ developers" isCard={false} />
+<UsedBy title="Used by +750k developers" isCard={false} />
 <SectionCommon
   titleClassNames="!mb-micro"
   title="Compare features"

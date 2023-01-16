@@ -61,10 +61,22 @@ If you want to set that environment variable in your terminal, you can do so usi
 eval $(gp env -e foo=bar)
 ```
 
+If you're using `fish` shell:
+
+```sh
+eval (gp env -e foo=bar)
+```
+
 To update the current terminal session with the latest set of persistent environment variables, use:
 
 ```sh
 eval $(gp env -e)
+```
+
+If you're using `fish` shell:
+
+```sh
+eval (gp env -e)
 ```
 
 To delete a persistent environment variable use:

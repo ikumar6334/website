@@ -47,7 +47,9 @@
       url="https://gitpod.io/#https://github.com/gitpod-io/voting-app"
     />
     <p class="mt-x-small md:mb-24">
-      Do you still have questions? <a href="/contact/sales">Contact sales.</a>
+      Do you still have questions? <a href="/contact/sales?subject=enterprise"
+        >Contact sales.</a
+      >
     </p>
   </div>
 </Body>
@@ -74,7 +76,7 @@
 <Explore
   contents={{
     secondaryLink: {
-      href: "/contact/sales",
+      href: "/contact/sales?subject=enterprise",
       text: "Contact Sales",
     },
   }}

@@ -51,13 +51,14 @@ You can leave a team using the more actions button in the Members list while hov
 | Permission             | Owner | Member |
 | ---------------------- | ----- | ------ |
 | Manage Team Members    | Yes   | No     |
-| Delete Team            | Yes   | No     |
-| Manage Team billing    | Yes   | No     |
+| Edit Team Settings     | Yes   | No     |
+| Manage Team Billing    | Yes   | No     |
 | Edit Project Settings  | Yes   | No     |
 | Edit Project Variables | Yes   | No     |
+| View Team Usage        | Yes   | No     |
 | Invite Team Members    | Yes   | Yes    |
-| Add Projects.          | Yes   | Yes    |
-| Remove Projects.       | Yes   | Yes    |
+| Add Projects           | Yes   | Yes    |
+| Remove Projects        | Yes   | Yes    |
 | Add Projects           | Yes   | Yes    |
 | View Branches          | Yes   | Yes    |
 | View Prebuilds         | Yes   | Yes    |

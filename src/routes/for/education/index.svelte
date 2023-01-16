@@ -44,7 +44,7 @@
 
 <SectionFeatures
   title="Be ready to teach immediately"
-  text="Spin up fresh, automated dev environments for each learner, in the cloud, in seconds."
+  text="Spin up fresh cloud development environments for each learner, in the cloud, in seconds."
   {features}
 />
 

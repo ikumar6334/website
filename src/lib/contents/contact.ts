@@ -22,7 +22,7 @@ export const contactActions: Card[] = [
     text: "We’d love to talk about how we can work together.",
     link: {
       text: "Contact Sales",
-      href: "/contact/sales",
+      href: "/contact/sales?subject=enterprise",
     },
   },
   {

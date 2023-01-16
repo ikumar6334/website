@@ -21,16 +21,28 @@
     noOfEngineers,
   } from "$lib/contents/contact";
   import { scrollToElement } from "$lib/utils/helpers";
-  import { tick } from "svelte";
+  import { onMount, tick } from "svelte";
+  import { page } from "$app/stores";
   import Unleashing from "$lib/components/contact/unleashing.svelte";
-  import { afterNavigate } from "$app/navigation";
   import InputsHalf from "$lib/components/contact/inputs-half.svelte";
-  import { goto } from "$app/navigation";
+  import { afterNavigate, goto } from "$app/navigation";
 
   const enterpriseSubject = "Enterprise";
   const otherSubject = "Other";
   const demoSubject = "Get a demo";
   const subjects = [enterpriseSubject, demoSubject, "Reselling", otherSubject];
+
+  onMount(() => {
+    const subject = $page.url.searchParams.get("subject");
+    const match = subjects.find(
+      (s) => s.toLowerCase() === subject?.toLowerCase()
+    );
+
+    if (match) {
+      formData.selectedSubject.value = match;
+      formData.selectedSubject.valid = true;
+    }
+  });
 
   let sectionStart: HTMLElement;
   let isCloudPlatformsSelectShown = false;

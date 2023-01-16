@@ -40,3 +40,16 @@ Team members can configure Prebuilds, and set the workspace class used for proje
 ### Remove a project
 
 You can remove a project using the "Remove project" action from a project card.
+
+
+## FAQs
+
+### [New Project page is stuck at fetching repositories](https://discord.com/channels/816244985187008514/1056255866791272488)
+<!-- DISCORD_BOT_FAQ - DO NOT REMOVE -->
+
+To identify the problem: check browser console logs.
+
+Possible solution(s):
+
+- Try to disconnect Git(Hub/Lab) or Bitbucket from https://gitpod.io/integrations, then reconnect.
+- Make sure correct scopes are set for those Git integration providers as well.

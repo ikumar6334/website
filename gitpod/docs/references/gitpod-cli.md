@@ -156,6 +156,8 @@ Returns a table-formatted list of tasks, their name, state and the ID of the ter
 gp tasks list
 ```
 
+Use `gp tasks list --no-color` to disable colors for the output. It also respects the [`NO_COLOR`](https://no-color.org/) & `GP_NO_COLOR` environment variable.
+
 ### attach
 
 Creates a connection from a user terminal to a given workspace's task terminal. The session is interactive. Once attached, both stdin and stdout are streamed between the user and the remote terminal. Allowing the user to run commands directly in the task terminal.
@@ -246,6 +248,8 @@ Outputs a table-formatted list of ports along with their status, URL, name and d
 gp ports list
 ```
 
+Use `gp ports list --no-color` to disable colors for the output. It also respects the [`NO_COLOR`](https://no-color.org/) & `GP_NO_COLOR` environment variable.
+
 ### expose
 
 In Gitpod, services/servers running on a port need to be _exposed_ before they become accessible from the internet. This process only works with services listening on `0.0.0.0` and not just `localhost`.
@@ -291,4 +295,6 @@ Displays the current workspace's class info along with the used and available CP
 gp top
 ```
 
-Use `gp top --json` to get the output in JSON format for programmatic use in (e.g. in shell scripts).
+- Use `gp top --json` to get the output in JSON format for programmatic use in (e.g. in shell scripts).
+
+- Use `gp top --no-color` to disable colors for the output. It also respects the [`NO_COLOR`](https://no-color.org/) & `GP_NO_COLOR` environment variable.

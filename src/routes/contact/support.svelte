@@ -17,6 +17,7 @@
   import Button from "$lib/components/ui-library/button";
   import Card from "$lib/components/ui-library/card";
   import { scrollToElement } from "$lib/utils/helpers";
+  import { page } from "$app/stores";
   import {
     cloudPlatforms,
     noOfEngineers as noOfEngineersArray,
@@ -36,6 +37,18 @@
     "Security",
     otherSubject,
   ];
+
+  onMount(() => {
+    const subject = $page.url.searchParams.get("subject");
+    const match = subjects.find(
+      (s) => s.toLowerCase() === subject?.toLowerCase()
+    );
+
+    if (match) {
+      formData.selectedSubject.value = match;
+      formData.selectedSubject.valid = true;
+    }
+  });
 
   let isCloudPlatformsSelectShown = false;
 
@@ -188,13 +201,6 @@
       console.error(error);
     }
   };
-
-  onMount(() => {
-    if (window.location.search.includes("open-source-sponsorship")) {
-      formData.selectedSubject.value = "Open Source Sponsorship";
-      formData.selectedSubject.valid = true;
-    }
-  });
 </script>
 
 <OpenGraph

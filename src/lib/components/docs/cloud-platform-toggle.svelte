@@ -79,9 +79,10 @@
     {/if}
     {#if $$slots.aws}
       {#if activeValue === 2}
-        <article>
+        <article
           class="px-4 py-4 rounded-b-2xl rounded-tr-2xl border-t-0 bg-white
-          dark:bg-card" >
+        dark:bg-card"
+        >
           <slot name="aws" />
         </article>
       {/if}

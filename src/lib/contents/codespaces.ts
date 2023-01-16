@@ -284,7 +284,7 @@ export const featureCards: {
         alt: "Cloud Icon",
       },
       link: {
-        href: "/contact/sales",
+        href: "/contact/sales?subject=enterprise",
         text: "Talk to sales",
       },
     },

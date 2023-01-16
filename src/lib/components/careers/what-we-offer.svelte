@@ -9,7 +9,7 @@
       <div
         class="bg-card py-[0.625rem] flex items-center px-micro rounded-2xl dark:bg-light-black text-important"
       >
-        <span class="mr-macro">{emoji}</span>
+        <span class="mr-macro w-7 flex-shrink-0 text-center">{emoji}</span>
         {text}
       </div>
     {/each}

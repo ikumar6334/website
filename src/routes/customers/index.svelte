@@ -49,7 +49,7 @@
     text: "View stories",
   }}
   btnSecondary={{
-    href: "/contact/sales",
+    href: "/contact/sales?subject=enterprise",
     text: "Contact sales",
   }}
 />
@@ -62,7 +62,7 @@
 
 <SectionFeatures
   title="Accelerate your workflow"
-  text="Spin up fresh, automated developer environments for each task, in the cloud, in seconds."
+  text="Spin up fresh, cloud development environments for each task, fully automated, in seconds."
   features={[{ ...developFeature, headingLevel: "h3" }]}
   type="box"
 />
@@ -78,7 +78,7 @@
 <UsedBy
   isCard={false}
   class="py-small"
-  title="Trusted by 750k+ developers"
+  title="Trusted by +750k developers"
   isCustomerStoriesLinkShown={false}
 />
 
@@ -87,7 +87,7 @@
 <Explore
   contents={{
     description:
-      "Spin up fresh, automated dev environments for each task, in the cloud, in seconds - no contracts or banking details&nbsp;required.",
+      "Spin up fresh cloud development environments for each task, in the cloud, in seconds - no contracts or banking details&nbsp;required.",
     secondaryLink: {
       href: "https://www.notion.so/gitpod/Gitpod-Onboarding-Guides-Stages-1-3-d97968210ad2408789e968597fe4633c",
       text: "View onboarding guides",

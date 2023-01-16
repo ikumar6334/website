@@ -53,7 +53,7 @@
 
 <CalloutSecondary
   title="Feel the difference"
-  text="Spin up fresh, automated dev environments for each task, in the cloud, in
+  text="Spin up fresh cloud development environments for each task, in the cloud, in
   seconds."
 />
 
