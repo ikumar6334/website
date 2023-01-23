@@ -17,6 +17,7 @@ Workspaces can be created on their own, or as part of a [Project](/docs/configur
 - [Workspace Image](/docs/configure/workspaces/workspace-image)
 - [Tasks](/docs/configure/workspaces/tasks)
 - [Ports](/docs/configure/workspaces/ports)
+- [Testing Workspace Configuration Changes](/docs/configure/workspaces/testing-changes)
 - [Collaboration](/docs/configure/workspaces/collaboration)
 - [Multi-repo](/docs/configure/workspaces/multi-repo)
 - [Workspace Classes](/docs/configure/workspaces/workspace-classes)
