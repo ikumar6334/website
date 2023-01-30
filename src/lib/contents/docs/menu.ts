@@ -44,7 +44,7 @@ export const MENU: MenuEntry[] = [
     M("Workspace Image", "configure/workspaces/workspace-image"),
     M("Tasks", "configure/workspaces/tasks"),
     M("Ports", "configure/workspaces/ports"),
-    M("Testing Changes", "configure/workspaces/testing-changes"),
+    M("'Debug' Workspaces", "configure/workspaces/debug-workspace"),
     M("Collaboration", "configure/workspaces/collaboration", false, []),
     M("Multi-repo", "configure/workspaces/multi-repo", false, [], "beta"),
     M("Workspace classes", "configure/workspaces/workspace-classes"),
