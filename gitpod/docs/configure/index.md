@@ -9,13 +9,7 @@ title: Configure Gitpod
 
 # Configure Gitpod
 
-You can open any repository in Gitpod by prefixing the full repository URL with `gitpod.io/#`.
-
-**For example:** [https://gitpod.io/#https://github.com/nodejs/node](https://gitpod.io/#https://github.com/nodejs/node)
-
-> **Note:** For [Self-Hosted](/docs/configure/self-hosted/latest), substitute gitpod.io for the domain of your installation.
-
-To get the most out of Gitpod, commit a [`.gitpod.yml`](/docs/references/gitpod-yml) to the root of your project to give instructions to Gitpod about what packages to install, which process to start, and much more.
+> **Looking for a guide on how to configure Gitpod?** <br/> See [Configuring Gitpod](/docs/introduction/learn-gitpod/configuring-gitpod) in the [Learn Gitpod](/docs/introduction/learn-gitpod) documentation.
 
 ## Workspaces
 

@@ -28,7 +28,7 @@ There are at least two ways to configure the Java version for each new Gitpod wo
 
 ## Set Java version with `.gitpod.yml`
 
-Gitpod workspaces can be configured with [`.gitpod.yml`](https://www.gitpod.io/docs/introduction/learn-gitpod/gitpod-yaml). We can specify [startup task(s)](https://www.gitpod.io/docs/configure/workspaces/tasks) that will execute shell commands for us:
+Gitpod workspaces can be configured with [`.gitpod.yml`](https://www.gitpod.io/docs/introduction/learn-gitpod/configuring-gitpod). We can specify [startup task(s)](https://www.gitpod.io/docs/configure/workspaces/tasks) that will execute shell commands for us:
 
 ```yaml
 tasks:
@@ -124,7 +124,7 @@ image:
   file: .gitpod.Dockerfile
 ```
 
-And follow [see it in action!](https://www.gitpod.io/docs/introduction/learn-gitpod/gitpod-yaml#see-it-in-action)
+And follow [see it in action!](https://www.gitpod.io/docs/introduction/learn-gitpod/configuring-gitpod#see-it-in-action)
 
 Once you recreate the workspace, and the new image is built:
 

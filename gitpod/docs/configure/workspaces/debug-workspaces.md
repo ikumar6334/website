@@ -1,25 +1,19 @@
 ---
 section: workspaces
-title: Testing Workspace Configuration Changes
+title: Debug Workspace
 ---
 
 <script context="module">
   export const prerender = true;
 </script>
 
-# Testing Workspace Configuration Changes
+# Debug Workspace
 
-Lorem Ipsum
-
-## Restarting the workspace
-
-## Debug Workspace
+> This feature is currently in [Alpha](/docs/help/public-roadmap/release-cycle). [Send feedback](https://github.com/gitpod-io/gitpod/issues/7671).
 
 When updating your configuration (e.g. `.gitpod.yml` and `Dockerfile`) you can test your changes by creating a brand new workspace, waiting for it to load, and observing the result. However, this process can be time consuming, and requires you to commit untested changes.
 
 ### What is a Debug Workspace?
-
-> This feature is currently in [Alpha](/docs/help/public-roadmap/release-cycle). [Send feedback](https://github.com/gitpod-io/gitpod/issues/7671).
 
 That's where you can use 'debug workspaces'. Debug workspaces run your updated configuration _within_ the current workspace. Debug workspaces allow you to troubleshoot issues with:
 

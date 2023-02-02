@@ -170,6 +170,7 @@ https://community.gitpod.io/* https://www.gitpod.io/chat 301!
 /docs/references/ides-and-editors/jetbrains-gateway /docs/integrations/jetbrains-gateway
 /docs/command-line-interface /docs/references/gitpod-cli
 /docs/config-gitpod-file /docs/introduction/learn-gitpod/gitpod-yaml
+/docs/introduction/learn-gitpod/gitpod-yaml /docs/introduction/learn-gitpod/configuring-gitpod
 /docs/references/gitpod-releases /docs/help/public-roadmap/release-cycle
 /docs/bitbucket-server-integration /docs/configure/authentication/bitbucket-server
 /docs/bitbucket-integration  /docs/configure/authentication/bitbucket
