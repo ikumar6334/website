@@ -22,203 +22,102 @@ data={{
 
 # Getting started
 
-<!-- TODO: Add a visual overview, like map of the content -->
+In this guide we'll walk you through the basics to get up and running with Gitpod today.
 
-## Code in the cloud
+- [Step 1: Your first workspace](#step-1-your-first-workspace)
+- [Step 2: Customize Gitpod](#step-2-customize-gitpod)
+- [Step 3: Gitpodify a project](#step-3-gitpodify-a-project)
+- [Step 4: Collaborate](#step-4-collaborate)
 
-<!-- TODO: Remember, we shouldn't mention features here at all, only value / outcome -->
-
-When you move your development environment to the cloud, you can have more computing resources, you can multitask on multiple code tasks at the same time.
-
-1. Open Workspace from any Git Context `gitpod.io/#`
-
-<!-- TODO: We might want to mention workspace classes -->
-<!-- TODO: Give a CTA for the best Gitpod example we have -->
-
-<!-- Show:
-- VS Code Browser
-- VS Code Desktop
-- JetBrains Desktop
-- CLI / Terminal / Vim (Desktop vim on Iterm)
--->
-<!-- TODO: This needs a new thumbnail -->
+## Step 1: Your first workspace
 
 `youtube: w65POyu3ZUQ`
 
-<!-- TODO: This could be too much here -->
+The best way to get see the power of Gitpod, is to try it out by starting your first [Workspace](/docs/configure/workspaces).
 
-**Learn more**
+<!-- TODO: Is this the process we want to suggest? -->
 
-- For more performance, see [Workspace Classes](/docs/configure/workspaces/workspace-classes)
+To start your first workspace:
 
-## Your environment, your tools
+1. Navigate to a GitHub, GitLab or Bitbucket repository.
+2. Open the repo in Gitpod by prefixing the URL with: `gitpod.io/#`
 
-At Gitpod we believe we should "[integrate, not dictate](/blog/gitpod-core-values)". So, you can choose your own IDE or editor, extend your workspace with Dotfiles, etc.
+<!-- TODO: Is this the "best" Gitpod example we have? -->
 
-`youtube: VYHsd1zI_tE`
+For example, click this link to open the NodeJS project in a Gitpod workspace:
 
-- [JetBrains Gateway](/docs/integrations/jetbrains-gateway)
-- [VS Code Browser](/docs/references/ides-and-editors/vscode-browser)
-- [VS Code Desktop](/docs/references/ides-and-editors/vscode)
+[`https://gitpod.io/#https://github.com/nodejs/node`](https://gitpod.io/#https://github.com/nodejs/node)
 
-## Gitpodify your project
+## Step 2: Customize Gitpod
 
-You've created your first Gitpod workspace. But that's not everything! The power of Gitpod comes when you codify your project using a `.gitpod.yml` file,
+<!-- `youtube: VYHsd1zI_tE` -->
+
+Gitpod can be customized depending on the needs of the project, and your own personal taste. With Gitpod, you can set an IDE preference between VS Code and JetBrains, either working in the browser, or on your desktop application. You can add custom scripts via Dotfiles.
+
+### Set your IDE preference
+
+<figure>
+  <video controls playsinline autoplay loop muted class="shadow-medium w-full rounded-xl max-w-3xl mt-x-small" src="/images/editors/select-jetbrains-ide.webm" type="video/webm"></video>
+  <figcaption>Updating Gitpod IDE preferences to {title}</figcaption>
+</figure>
+
+Work in the browser with [VS Code Browser](/docs/references/ides-and-editors/vscode-browser), or on desktop with [VS Code Desktop](/docs/references/ides-and-editors/vscode) or [JetBrains Gateway](/docs/integrations/jetbrains-gateway). To set your preferences, navigate to [gitpod.io/preferences](gitpod.io/preferences) to set your [IDE preference](/docs/references/ides-and-editors).
+
+### Install the browser extension
+
+![Browser Extension](../../../static/images/docs/browser-extension-lense.png)
+
+A convinient way to work with Gitpod is using the custom [browser extension](/docs/configure/user-settings/browser-extension). Using the extension you can open workspaces directly from inside GitHub.
+
+### Set your Dotfiles
+
+Dotfiles are a way to customize your developer environment according to your personal needs. To configure Gitpod to use your own dotfiles for all your workspaces, enter the URL of a dotfiles repository in your user preferences. See [Dotfiles](/docs/configure/user-settings/dotfiles) for more.
+
+See [User Settings](/docs/configure/user-settings) for more ways to customize Gitpod.
+
+## Step 3: Gitpodify a project
+
+Opening a repository in Gitpod starts a workspace and clones the source code. To start developing though, you would then have to install any required dependencies, run any build scripts and start servers. Luckily, with Gitpod, we can automate all of those steps.
+
+1. Add a `.gitpod.yml` at the root of your repository.
+   - **Tip:** Run `gp init` to generate a scaffold `.gitpod.yml` file.
+2. Use the `gp rebuild` command to test your configuration.
+3. Commit + push the configuration!
+
+Now, every new workspace opened will run the steps defined in your `gitpod.yml`.
 
 <!-- TODO: Gitpodify with `.gitpod.yml` -->
 
-**Learn more:**
+### A gitpod.yml example
 
-- For faster workspace starts, see [prebuilds](/docs/configure/projects/prebuilds)
+```yaml
+# Commands that will run on workspace start
+tasks:
+  - name: Setup, Install & Build
+    before: yarn global add express
+    init: yarn install
+    command: yarn build
 
-## Collaborate with Gitpod
+# Ports to expose on workspace startup
+ports:
+  - port: 3000
+    onOpen: open-preview
+    name: Website
+    description: Website Preview
+```
+
+**Caption:** An example project configured to install, build and run a `yarn` project with a webserver, exposed on port 3000. On start, the webserver preview is opened automatically.
+
+### Gitpod, but faster
+
+You might have noticed the different task commands above, such as `init` and `before`. See [Workspace Tasks](/docs/configure/workspaces/tasks) for more.
+
+Excellent! To learn more about the difference between init and command, please have a look at Start Tasks.
+
+See the [.gitpod.yml reference page](/docs/references/gitpod-yml) for more.
+
+## Step 4: Collaborate
 
 `youtube: TrY15zN98p8`
 
 Gitpod can provide fully initialized, perfectly set-up developer environments for any kind of software project. This page helps you understand how to provide such a configuration for _your project_.
-`youtube: w65POyu3ZUQ`
-
-## Start your first workspace
-
-The best way to configure Gitpod is by using Gitpod - you could perform the following steps in your local environment as well, but we may as well experience ephemeral developer environments right from the beginning.
-
-1. In a browser, navigate to your project's GitHub, GitLab or Bitbucket page.
-1. In the browser's address bar, prefix the entire URL with `gitpod.io/#` and press Enter.
-   - For example, `gitpod.io/#https://github.com/gitpod-io/website`
-   - We recommend you [install the Gitpod browser extension](/docs/configure/user-settings/browser-extension) to make this a one-click operation.
-1. Sign in with one of the listed providers and let the workspace start up.
-
-**Congratulations**, you have started your first of many ephemeral developer environments 🎉!
-
-### Open in Gitpod button
-
-You can add the following button to your Development/Setup Docs so that users can launch projects in Gitpod and begin working on them without having to go through the entire setup process.
-
-<img src="https://gitpod.io/button/open-in-gitpod.svg" alt="Open with Gitpod"/>
-
-```markdown
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#<your-repository-url>)
-```
-
-> here, `your-repository-url` can be something like: `https://github.com/gitpod-samples/awesome-gitpod` or any of your Repository URLs.
-
-### Contribute with Gitpod badge
-
-To make it easy for anyone to start a Gitpod workspace based on your project, we recommend you add a badge to your `README.md`.
-
-<img src="https://img.shields.io/badge/Contribute%20with-Gitpod-908a85?logo=gitpod" alt="Contribute with Gitpod"/>
-
-```html
-<a href="https://gitpod.io/#<your-repository-url>">
-  <img
-    src="https://img.shields.io/badge/Contribute%20with-Gitpod-908a85?logo=gitpod"
-    alt="Contribute with Gitpod"
-  />
-</a>
-```
-
-Next, let's help Gitpod understand your repository to automate the developer environment and turn on prebuilds to supercharge your development workflow.
-
-## Help Gitpod understand your repository
-
-When you started your first workspace above, Gitpod didn't do much. In fact, all it did was start the workspace and `git clone` your source code.
-To develop, you still would have to install dependencies, run build scripts and start the development server every time you start a workspace... We can do better, so let's automate that!
-
-1. In the workspace terminal, make sure you are in your project's root directory (`pwd` should be `/workspace/<repo>`).
-1. Run `gp init` to generate a scaffold `.gitpod.yml` configuration file (see the [.gitpod.yml reference](/docs/references/gitpod-yml) for all configuration options).
-1. Open the newly created `.gitpod.yml` file.
-
-### Init script
-
-Most projects require some sort of initialization script to download and install dependencies, compile the source code, etc. For example, a Node.js project requires `npm install`. The `init` task by default reads `echo 'init script'`, let's replace that with your project-specific init command, for example:
-
-```yaml
-tasks:
-  - init: npm install
-    command: echo 'start script'
-```
-
-Excellent! To learn more about the difference between `init` and `command`, please have a look at [Start Tasks](/docs/configure/workspaces/tasks).
-
-### Command script
-
-Next, let's adjust the `command` script. This is the script Gitpod executes when the workspace successfully started up. In most cases, this is where you start your application's development server, e.g. `npm run dev`.
-
-```yaml
-tasks:
-  - init: npm install
-    command: npm run dev
-```
-
-### Configure your app's ports
-
-If your application starts a development server that listens on a certain port, we can let Gitpod know how to deal with that. To get started, update the `port` according to what your application listens on, e.g. `3000`.
-
-```yaml
-tasks:
-  - init: npm install
-    command: npm run dev
-ports:
-  - port: 3000
-    onOpen: open-preview
-```
-
-When Gitpod notices port 3000 is available, it automatically opens your application in a preview to the right of your editor - ready for you to develop and see your changes.
-
-### Commit `.gitpod.yml`
-
-Lastly, make sure to commit the `.gitpod.yml` configuration file to Git and push it to your repository.
-
-## Start your second workspace
-
-Once you committed and pushed `.gitpod.yml`, **open a new browser tab** and navigate to your project's page on GitHub, GitLab or Bitbucket.
-
-> If you pushed to a branch, please make sure you switch to that branch before you continue.
-
-1. Open a new workspace (see [Start your first workspace](#start-your-first-workspace) above).
-1. Observe how Gitpod automatically runs the tasks you configured.
-1. Wait until the development server started and your application's preview is displayed on the right side of the editor.
-
-If for some reason the second workspace does not start, simply close the tab and navigate back to the first workspace. Fix the errors that caused the workspace to fail based on the error output you see, commit and push your changes and start yet another workspace to test the latest changes.
-
-Congratulations, again 😊! You now have a basic Gitpod configuration and for each new workspace you start, Gitpod automatically runs the scripts you manually have to run locally.
-
-## Shut down your workspaces
-
-This is easy - close the workspace browser tabs.
-
-Within three minutes, the workspaces will be stopped. You can always find them at https://gitpod.io/workspaces - to be honest though, you can forget about them and start a new workspace the next time you work on your project.
-
-## Supercharge your experience with prebuilds
-
-The automation you have experienced so far is nice, but there's more! Remember that `init` task we [configured earlier](#init-script)?
-
-You may have wondered why there are separate `init` and `command` tasks. This is because we can tell Gitpod to **run the `init` script every time new code is pushed to your project**. By the time you or one of your organization members starts a new workspace, the `init` task already finished and you don't have to wait for that - saving you precious time. We call this **prebuilds**.
-
-### An intro to prebuilds
-
-Let's first look at an example and then configure your project to take advantage of prebuilds.
-
-Imagine this common workflow where Nina and Paul work on the same project:
-
-1. Nina opens a pull request where she developed a feature that requires a new dependency.
-1. _Gitpod notices the new code and kicks off a prebuild by cloning the source code and executing the `init` task. The result is saved as a prebuilt workspace._
-1. Some time later, Paul opens the pull request to start his code review.
-1. He opens a Gitpod workspace for that given pull request (learn more about [contexts](/docs/introduction/learn-gitpod/context-url)).
-1. _Gitpod recognizes it already ran the `init` task and loads the prebuilt workspace_
-1. By the time the workspace starts, Paul sees the development server starting up and the application's preview is ready for review.
-
-For each new commit to your project, Gitpod continuously creates prebuilt workspaces so that the project is always ready-to-code. If your project is open source, anyone gets to enjoy the efficiency of prebuilds regardless of whether they are part of your organization or not.
-
-### Configure prebuilds for your projects
-
-Depending on your Git provider, the steps to configure prebuilds vary slightly. Please refer to the dedicated [Prebuilds](/docs/configure/projects/prebuilds) page for detailed instructions on how to configure prebuilds for your project.
-
-## Next steps
-
-At this point, you have a `.gitpod.yml` configuration file to automate repetitive tasks and prebuilds configured to let Gitpod execute many of these tasks continuously whenever new code is pushed to your project - freeing you from waiting to download, install & build your project and its dependencies.
-
-To explore more of what Gitpod has to offer, we recommend the following next topics:
-
-- [Configure](/docs/configure) to learn more about start tasks, environment variables and how to provide your own custom Docker image as the foundation for workspaces.
-- [Develop](/docs/introduction/learn-gitpod) to learn more about the productivity gains you get with ephemeral workspaces, how contexts assist you and how to collaborate with organization members.
