@@ -9,7 +9,7 @@ title: .gitpod.yml
 
 # Configuring a project
 
-Gitpod is not simply "moving your laptop into the cloud". A key benefit of using a Cloud Development Environment ([CDE](https://www.gitpod.io/cde)) is _reproducibility_. When your workspace is configured, opening a new workspace is effortless—allowing you to fully embrace ephemeral development environments.
+Gitpod is not simply "moving your laptop into the cloud". A key benefit of using a Cloud Development Environment ([CDE](/cde)) is _reproducibility_. When your workspace is configured, opening a new workspace is effortless—allowing you to fully embrace ephemeral development environments.
 
 ## Understanding Gitpod configuration
 
@@ -92,8 +92,8 @@ To apply your changes for all subsequent workspaces, commit and push the `gitpod
 
 Open the commit in a new workspace by either:
 
-1. Prefixing your repo URL with `https://gitpod.io/#`
-   - **For example:** https://gitpod.io/#https://github.com/nodejs/node)
+1. Prefixing your repo URL with `gitpod.io/#`
+   - **For example:** [gitpod.io/#https://github.com/nodejs/node)](https://gitpod.io/#https://github.com/nodejs/node)
 2. Opening a new workspace from the [Gitpod dashboard](https://gitpod.io/dashboard)
 3. Installing, and using the [Gitpod Browser Extension](/docs/configure/user-settings/browser-extension#browser-extension)
 

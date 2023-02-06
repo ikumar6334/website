@@ -61,7 +61,7 @@ Gitpod can be customized depending on the needs of the project, and your own per
   <figcaption>Updating Gitpod IDE preferences to {title}</figcaption>
 </figure>
 
-Work in the browser with [VS Code Browser](/docs/references/ides-and-editors/vscode-browser), or on desktop with [VS Code Desktop](/docs/references/ides-and-editors/vscode) or [JetBrains Gateway](/docs/integrations/jetbrains-gateway). To set your preferences, navigate to [gitpod.io/preferences](gitpod.io/preferences) to set your [IDE preference](/docs/references/ides-and-editors).
+Work in the browser with [VS Code Browser](/docs/references/ides-and-editors/vscode-browser), or on desktop with [VS Code Desktop](/docs/references/ides-and-editors/vscode) or [JetBrains Gateway](/docs/integrations/jetbrains-gateway). To set your preferences, navigate to [gitpod.io/preferences](https://gitpod.io/preferences) to set your [IDE preference](/docs/references/ides-and-editors).
 
 ### Install the browser extension
 
