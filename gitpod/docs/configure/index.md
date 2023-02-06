@@ -9,7 +9,7 @@ title: Configure Gitpod
 
 # Configure Gitpod
 
-> **Looking for a guide on how to configure Gitpod?** <br/> See [Configuring Gitpod](/docs/introduction/learn-gitpod/configuring-gitpod) in the [Learn Gitpod](/docs/introduction/learn-gitpod) documentation.
+> **Looking for a guide on how to configure Gitpod?** <br/> See [Configuring Gitpod](/docs//docs/configure/workspaces).
 
 ## Workspaces
 

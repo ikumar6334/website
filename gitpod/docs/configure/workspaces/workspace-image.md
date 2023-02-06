@@ -15,7 +15,9 @@ If this image does not include the tools you need for your project, you can prov
 
 > **Note:** Gitpod supports Debian/Ubuntu based Docker images. Alpine images do not include [libgcc and libstdc++](https://code.visualstudio.com/docs/remote/linux#_tips-by-linux-distribution) which breaks Visual Studio Code. See also [Issue #3356](https://github.com/gitpod-io/gitpod/issues/3356).
 
-## Use a public Docker image
+## Configuring a Workspace Image
+
+### Use a public Docker image
 
 You can define a public Docker image in your `.gitpod.yml` file with the following configuration:
 
@@ -27,13 +29,13 @@ The official Gitpod Docker images are hosted on <a href="https://hub.docker.com/
 
 You can find the source code for these images in <a href="https://github.com/gitpod-io/workspace-images/" target="_blank">this GitHub repository</a>.
 
-### Docker image tags
+**Docker image tags**
 
 For public images, feel free to specify a tag, e.g. `image: node:buster` if you are interested in a particular version of the Docker image.
 
 For Gitpod images, we recommend using timestamped tag for maximum reproducibility, for example `image: gitpod/workspace-full:2022-05-08-14-31-53` (taken from the `Tags` panel on [this dockerhub page](https://hub.docker.com/r/gitpod/workspace-full/tags) for example)
 
-## Use a private Docker image
+### Use a private Docker image
 
 > This is currently in [Alpha](/docs/help/public-roadmap/release-cycle).
 
@@ -43,7 +45,7 @@ To do so you must provide the registry authentication details to Gitpod by setti
 
 For example, if the registry is `docker.io`, the username is `foo` and the password is `bar`, the `GITPOD_IMAGE_AUTH` environment variable value may be calculated using the command `echo -n "docker.io:"; echo -n "foo:bar" | base64 -w0` which outputs `docker.io:Zm9vOmJhcg==`.
 
-## Use a custom Dockerfile
+### Using a custom Dockerfile
 
 This option provides you with the most flexibility. Start by adding the following configuration in your `.gitpod.yml` file:
 
@@ -136,37 +138,6 @@ USER gitpod
 **Additional tools & languages:** see https://github.com/gitpod-io/workspace-images/tree/main/chunks for references to configure your workspace image with common tools and languages. For instance, [this Dockerfile](https://github.com/gitpod-io/workspace-images/blob/main/chunks/tool-docker/Dockerfile) shows how to install `docker` and `docker-compose`.
 
 **Tailscale:** see [the Tailscale integration docs](/docs/integrations/tailscale#integration) for setting up Tailscale in a custom Dockerfile.
-
-## Trying out changes to your Dockerfile
-
-### In the existing workspace
-
-To test your custom `.gitpod.Dockerfile`, run the following command:
-
-```bash
-gp rebuild
-```
-
-This builds a new image from your workspace, spins up a container and connects to it. Once connected, you can confirm all necessary tools and libraries are installed in the container. Finally, type `exit` to disconnect and return to your Gitpod workspace.
-
-### As a new workspace
-
-Once you validated the `.gitpod.Dockerfile` with the approach described in the previous chapter, it is time to start a new Gitpod workspace based on that custom image.
-
-The easiest way to try out your changes is as follows:
-
-1. Create a new branch.
-1. Commit your changes & push the branch to your git hosting server.
-1. Open a pull / merge request and open it in your browser.
-1. Prefix the URL with `gitpod.io/#` and hit Enter.
-
-This starts a new workspace with your changes applied. You notice you now have two Gitpod workspaces running. The one where you made the changes and the new one, based on the pull request.
-
-**Caution**: Keeping the first workspace open is important in case your Dockerfile has bugs and prevents Gitpod from starting a workspace based on your pull request.
-
-In the second workspace, the Docker build will start and show the output. If your Dockerfile has issues and the build fails or the resulting workspace does not look like you expected, you can force push changes to your config using your first, still running workspace and simply start a fresh workspace again to try them out.
-
-We are working on allowing Docker builds directly from within workspaces, but until then this approach has been proven to be the most productive.
 
 ## Manually rebuild a workspace image
 

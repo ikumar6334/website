@@ -21,7 +21,7 @@ The primary method of configuration is using a YAML file named `.gitpod.yml`, lo
 2. Required tools to install before the project starts.
 3. Any editor extensions or IDE plugins to install.
 
-See the [`.gitpod.yml reference`](/docs/references/gitpod-yml) page for more.
+See the [.gitpod.yml reference](/docs/references/gitpod-yml) page for more.
 
 `youtube: fA2fpqP1xaM`
 
@@ -69,13 +69,13 @@ See the [Gitpod CLI](/docs/references/gitpod-cli) page for more.
 
 ## Testing your Gitpod configuration
 
-You can test your `.gitpod.yml` without needing to commit using `gp rebuild`. This command works using [Debug Workspaces](/docs/configure/workspaces/debug-workspaces). A Debug Workspace runs your updated configuration within your current workspace, allowing you to troubleshoot general workspace startup (ports, tasks, etc), image builds and more, without needing to commit and pollute your version history.
+You can test your `.gitpod.yml` using `gp rebuild` and [Debug Workspaces](/docs/configure/workspaces/debug-workspaces). A Debug Workspace runs a miniature workspace within your current workspace, applying the latest configuration and allowing you to troubleshoot workspace startup (ports, tasks, etc), image builds and more, without needing to commit and pollute your version history.
 
 To test your configuration changes:
 
-1. Run `gp rebuild` - This command emits a "debug workspace" URL.
+1. Run `gp rebuild` - This command will emit a Debug Workspace URL.
 2. Open the debug workspace to check your configuration.
-3. Update configuration in the original workspace and re-run `gp rebuild` if needed.
+3. Update configuration in the original workspace, re-running `gp rebuild` if needed.
 
 <!-- TODO: Test if needs to be root -->
 
@@ -84,13 +84,13 @@ To test your configuration changes:
     <figcaption>Debug workspace startup and shutdown</figcaption>
 </figure>
 
-See [Debug Workspaces](/docs/configure/workspaces/debug-workspaces) for more.
+> **Tip:** For improved configuration speed, consider using a large [Workspace Class](/docs/configure/workspaces/workspace-classes).
 
 ## Apply configuration changes
 
 To apply your changes for all subsequent workspaces, commit and push the `gitpod.yml` (and `.gitpod.Dockerfile` if you created one) to the root of your repository.
 
-Open the commit in a new workspace by:
+Open the commit in a new workspace by either:
 
 1. Prefixing your repo URL with `https://gitpod.io/#`
    - **For example:** https://gitpod.io/#https://github.com/nodejs/node)

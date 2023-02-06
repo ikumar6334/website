@@ -27,7 +27,6 @@ export const MENU: MenuEntry[] = [
       "introduction/learn-gitpod/one-workspace-per-task"
     ),
     M("Context URL", "introduction/learn-gitpod/context-url"),
-    M("Configuring Gitpod", "introduction/learn-gitpod/configuring-gitpod"),
   ]),
   M("Languages", "introduction/languages", false, [
     M("JavaScript", "introduction/languages/javascript"),
