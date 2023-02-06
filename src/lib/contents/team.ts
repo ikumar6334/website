@@ -49,7 +49,7 @@ export const featureTitles: FeatureTitle[] = [
   },
   {
     main: "From",
-    sub: "14",
+    sub: "37",
     third: "countries and regions",
   },
 ];

@@ -24,7 +24,7 @@
   }
 </style>
 
-<div>
+<div class="w-[28rem] inline-flex flex-col">
   <LinkButton
     class="flex h-14 items-center justify-between group !p-3"
     variant="cta"
@@ -37,7 +37,7 @@
       `"}`}
     rel="noopener"
   >
-    <div class="flex items-center">
+    <div class="inline-flex flex-wrap space-x-2 items-center">
       <img
         src={`/${logo}`}
         {alt}
@@ -46,7 +46,7 @@
         height="24"
       />
       <div
-        class="text-important transition-all duration-200 delay-[50ms] dark:hover:text-black"
+        class="w-48 text-left text-[#565252] transition-all duration-200 delay-[50ms] group-hover:text-black dark:group-hover:text-black dark:text-important"
       >
         {title}
       </div>

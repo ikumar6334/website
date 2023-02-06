@@ -1,6 +1,5 @@
 <script lang="ts">
   import LinkButton from "$lib/components/ui-library/link-button";
-  import GithubMark from "../svgs/github-mark.svelte";
   import ButtonsWrapper from "../buttons-wrapper.svelte";
 </script>
 
@@ -96,18 +95,6 @@
           >Contact sales</LinkButton
         >
       </ButtonsWrapper>
-      <div>
-        <div class="hero__icons">
-          <img src="/svg/gitlab.svg" alt="GitLab logo" title="GitLab logo" />
-          <GithubMark />
-          <img
-            src="/svg/bitbucket.svg"
-            alt="Bitbucket logo"
-            title="Bitbucket logo"
-          />
-        </div>
-        <p class="text-p-small mt-macro">Start from any Git context.</p>
-      </div>
     </div>
   </div>
   <div class="hero__illustration">

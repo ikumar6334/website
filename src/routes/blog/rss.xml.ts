@@ -32,7 +32,7 @@ export const get = async () => {
     ttl: 1800,
     feed_url: "https://www.gitpod.io/blog",
     site_url: "https://www.gitpod.io",
-    image_url: "https://www.gitpod.io/images/media-image.jpg",
+    image_url: "https://www.gitpod.io/favicon192.png",
     language: "en",
     categories: [
       "Gitpod updates",

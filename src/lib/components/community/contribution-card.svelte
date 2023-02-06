@@ -14,6 +14,7 @@
       case "Content":
         return "pink";
 
+      case "Gitpod Community":
       case "Discord contribution":
         return "violet";
 

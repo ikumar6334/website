@@ -5,23 +5,16 @@ import type { Testimonial } from "$lib/types/testimonial";
 
 export const testimonials: Testimonial[] = [
   {
-    name: "Pranav Shikarpur",
-    avatar: "snpranav.jpg",
-    text: `
-    I find it crazy that I can write code from my iPad 30,000 feet ✈️ off the ground thanks to @gitpod
-    <br /><br />
-    The IDE experience is a little buggy on the iPad browser, but this seems like the future of coding 🤯
-    `,
-    org: "@snpranav",
+    name: "Bruno Rocha",
+    avatar: "bruno-rocha.jpg",
+    text: `I migrated my entire development environment from Dynaconf to @gitpod the tool is amazing, I can access my complete workspaces from any device and run almost everything from vscodium + containers, right in the browser!`,
+    org: "@rochacbruno",
   },
   {
-    name: "Daniel Maricic",
-    avatar: "wossio.jpg",
-    text: `
-    it has been 3 months since i started using and paying @gitpod as my default env (in browser), replacing WSL + vscode + docker. The benefits are huge! Disposable workspaces are the best feature.
-    Also @AnagolayNet, @IdiyanaleNet & @kelp_digital are developed with them exclusively
-    `,
-    org: "@woss_io",
+    name: "Bartłomiej Płotka",
+    avatar: "bwplotka.jpg",
+    text: `This @gitpod thing is magic! Pretty cool, without any extra configuration. Good work!`,
+    org: "@bwplotka",
   },
   {
     name: "arryangga",
@@ -105,6 +98,39 @@ export const overviewCards = [
 ];
 
 export const contributionHighlights: Record<string, ContentCard[]> = {
+  "January 2023": [
+    {
+      badge: "Community office hours",
+      contributor: "Sébastien Blanc",
+      title: "Build a VSCode extension with Gitpod and Aiven",
+      text: "Sébastien shows us how you can use Gitpod and Aiven to easily build VSCode Extensions",
+      link: {
+        href: "https://twitter.com/sebi2706/status/1615640594071654401",
+        text: "View Tweet",
+      },
+    },
+    {
+      badge: "Gitpod Community",
+      contributor: "Jean-Phi Baconnais",
+      title: "First Gitpod Community Meetup!",
+      text: "Jean-Phi Baconnais has organised our very first Gitpod community meetup, and it's taking place in France",
+      link: {
+        href: "https://twitter.com/gitpod/status/1613557635088777220",
+        text: "View Tweet",
+      },
+    },
+    {
+      badge: "Content",
+      contributor: "Alex Patterson",
+      title: "Appwrite + Gitpod: One Click Setup",
+      text: "In this blog post, Alex shows us how you can use Appwrite in your Gitpod workspace",
+      link: {
+        href: "https://dev.to/appwrite/appwrite-gitpod-one-click-setup-2894",
+        text: "Read Post",
+      },
+    },
+  ],
+
   "December 2022": [
     {
       badge: "Content",

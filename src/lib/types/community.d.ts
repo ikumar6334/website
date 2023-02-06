@@ -10,4 +10,5 @@ export type ContentBadge =
   | "Content"
   | "Community office hours"
   | "Discord contribution"
-  | "Open Source";
+  | "Open Source"
+  | "Gitpod Community";

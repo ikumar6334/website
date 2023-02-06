@@ -287,3 +287,4 @@ docs/ides-and-editors/jetbrains-gateway /docs/integrations/jetbrains-gateway
 docs/configure/billing/team-billing /docs/configure/billing/org-billing
 docs/configure/billing/team-plans /docs/configure/billing/org-plans
 /docs/configure/organizations /docs/configure/orgs
+/blog/rss /blog/rss.xml

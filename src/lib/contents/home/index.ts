@@ -97,18 +97,18 @@ export const brands: Brand[] = [
 ];
 
 export const logosAnimated: Brand[] = [
-  freeCodeCamp,
+  dataStax,
   gitlab,
+  amazon,
+  astrato,
   jetbrains,
   redwood,
-  google,
-  amazon,
   codeInstitute,
-  fourGeeks,
-  dataStax,
-  shares,
-  astrato,
+  google,
   factorial,
+  fourGeeks,
+  shares,
+  freeCodeCamp,
 ];
 
 export const projects: Project[] = [
@@ -188,34 +188,124 @@ export const projects: Project[] = [
 
 export const testimonials: Testimonial[] = [
   {
-    name: "Ben Halpern",
-    avatar: "ben-halpern.jpg",
+    name: "Tom Preston Werner",
+    avatar: "tom-preston-werner.jpg",
     org: `<span>
-          @forem
+          GitHub
         </span>
         and
         <span>
-          @ThePracticalDev
+          RedwoodJS
         </span>`,
-    role: "Creator and Co-founder",
+    role: "Creator and Co-founder of",
     text: `
-      <p>GitPod is incredibly cool.</p>
-      <p>In my opinion, this is a big step in open source software contribution. I'm excited to see where we go from here.</p>
+      <p>
+      Gitpod totally changed the development 
+      velocity for RedwoodJS—it removed any 
+      issues related to configurations of dev 
+      environments and made it incredibly 
+      easy to contribute.
+      </p>
     `,
   },
   {
-    name: "Michael Friedrich",
-    avatar: "michael-friedrich.jpg",
+    name: "Keith Adams",
+    avatar: "keith-adams.jpg",
     org: `<span>
-        @GitLab
+        Slack
       </span>`,
-    role: "Developer Evangelist",
+    role: "Former Chief Architect of",
+    text: `
+    <p>
+    Gitpod is the most exciting developer tool 
+    I have encountered since, I don’t know, 
+    telnet maybe? Unix? It’s been a while.
+    </p>
+      `,
+  },
+
+  {
+    name: "Max Shafirov",
+    avatar: "max-shafirov.webp",
+    org: `
+      <span>
+        JetBrains
+      </span>
+    `,
+    role: "CEO at",
     text: `
         <p>
-          Let's say we were overwhelmed how smooth @gitpod workspaces creation & own Docker image for workspaces worked.
+        Through our partnership with Gitpod, we 
+        are enabling our mutual users to accelerate 
+        productivity, save resources and time while 
+        strengthening security compliance
         </p>
+      `,
+  },
+  {
+    name: "François Ruty",
+    avatar: "françois-ruty.webp",
+    org: `
+      <span>
+        Shares
+      </span>
+    `,
+    role: "CTO at",
+    text: `
+          <p>
+          Gitpod easily saves every engineer half a 
+          day per week. The amount of productivity 
+          we gain is staggering.
+          </p>
+      `,
+  },
+  {
+    name: "Josep Jaume",
+    avatar: "josep-jaume.webp",
+    org: `
+      <span>
+        Factorial
+      </span>
+    `,
+    role: "Director of Developer Experience at",
+    text: `
+      <p>
+      I’d estimate each engineer saves 5 to 10 
+      hours a month on dev environment 
+      issues that just don’t exist with Gitpod.
+      </p>
+    `,
+  },
+  {
+    name: "Konrad Mattheis",
+    avatar: "konrad-mattheis.webp",
+    org: `
+      <span>
+        Vizlib
+      </span>
+    `,
+    role: "CTO at",
+    text: `
+      <p>
+      The ability for QAs to easily test a branch 
+      resulted in 20% fewer hotfixes after releases.
+      </p>
+    `,
+  },
+
+  {
+    name: "Alejandro Sánchez",
+    avatar: "alejandro-sanchez.jpeg",
+    org: `
+      <span>
+        4GeeksAcademy
+      </span>
+    `,
+    role: "Founder of",
+    text: `
         <p>
-          Plus, installing @code extensions from the store and integrating @gitlab CI. That blew my mind entirely, and that is hard ;)
+        I would rather shut down the academy 
+        than stop using Gitpod.
         </p>
       `,
   },
@@ -223,226 +313,13 @@ export const testimonials: Testimonial[] = [
     name: "Julius Volz",
     avatar: "julius-volz.jpg",
     org: `<span>
-        @PrometheusIO
+        PrometheusIO
       </span>`,
-    role: "Creator",
+    role: "Creator of",
     text: `
       <p>
         Look at any PR (pull request) in a full coding environment where you can edit, build, and test the PR code, by just prepending "gitpod.io#" to the PR URL. Super useful for reviewing/testing stuff without having to check it out locally!
       </p>
-      `,
-  },
-  {
-    name: "David Ressler",
-    avatar: "david-ressler.jpg",
-    org: `
-      <span>
-        @instagram
-      </span>
-    `,
-    role: "Engineering Manager",
-    text: `
-        <p>
-          I think I’m in love with @gitpod. It’s such a powerful tool. I’ve learned so much in the past week
-          just from stumbling across Github repos that interest me and appending
-          “http://gitpod.io/#” to the URL. A+ tool all around.
-        </p>
-      `,
-  },
-  {
-    name: "Bartłomiej Płotka",
-    avatar: "bwplotka.jpg",
-    org: `
-      <span>
-        @RedHat
-      </span>
-    `,
-    role: "Principal Software Engineer",
-    text: `
-        <div>
-          <p>
-            This @gitpod thing is magic! Pretty cool, without any extra configuration. Good work!
-          </p>
-
-          <p>https://gitpod.io/#https://github.com/thanos-io/thanos</p>
-        </div>
-      `,
-  },
-  {
-    name: "Mrugesh Mohapatra",
-    avatar: "mrugesh-mohapatra.jpg",
-    org: `
-      <span>
-        @freeCodeCamp
-      </span>
-    `,
-    role: "Technology & Community",
-    text: `
-      <p>
-          Ya'all @gitpod is freaking amazing! We integrated it into our workflow for working on @freeCodeCamp's codebase and I am honestly loving it. 🔥🔥!
-          <br />
-          Go check it out on our repo https://github.com/freeCodeCamp/f... now!
-        </p>
-    `,
-  },
-  {
-    name: "Sven Peters",
-    avatar: "sven-peters.jpg",
-    org: `
-      <span>
-        @MongoDB
-      </span>
-    `,
-    role: "Dev Advocate",
-    text: `
-      <p>
-          Huge time saver, less frustrations for devs: Automated ready-to-code
-          dev environments with pre-build workspaces. #gitpod #cloudide
-        </p>
-    `,
-  },
-  {
-    name: "Jonathan Lister Parsons",
-    avatar: "jonathan-lister-parsons.jpg",
-    org: `
-      <span>
-        @PensionBee
-      </span>
-    `,
-    role: "CTO",
-    text: `
-        <p>
-          I'm really enjoying @gitpod - for me, it's made full-stack development in the browser (yes,including mobile) a reality
-        </p>
-      `,
-  },
-  {
-    name: "Alejandro",
-    avatar: "alejandro-sanchez.jpeg",
-    org: `
-      <span>
-        @4GeeksAcademy
-      </span>
-    `,
-    role: "Co-Founder",
-    text: `
-        <p>
-          My setup is on @gitpod, just like Christopher McCandless, where I go my code goes with me,
-          no setup whatsoever Smiling face with sunglasses 😎 #IntoTheWild
-        </p>
-      `,
-  },
-  {
-    name: "ROKU",
-    avatar: "roman-kuba.jpg",
-    org: `
-      <span>
-        @GitLab
-      </span>
-    `,
-    role: "Engineering Manager",
-    text: `
-        <p>
-          Have to say that @gitpod is just super nice to use. Very impressed by the performance!
-        </p>
-    `,
-  },
-  {
-    name: "Hugh Durkin",
-    avatar: "hugh-durkin.jpg",
-    org: `
-      <span>
-        @HubSpot
-      </span>
-    `,
-    role: "Platform Ecosystem",
-    text: `
-        <p>
-          I've been playing around with the "next generation" of Cloud IDEs
-          lately, and @gitpodio is quickly emerging as one of the best 👨‍💻 <br /> Awesome @github integration, slick Chrome extension, and super fast 🚀
-          https://gitpod.io/index.html
-        </p>
-      `,
-  },
-  {
-    name: "Marcel van Remmerden",
-    avatar: "marcel-van-remmerden.jpg",
-    org: `
-      <span>
-        @GitLab
-      </span>
-    `,
-    role: "Product Design Manager",
-    text: `<p>
-          Can only agree, opening a GitLab repository in gitpod is a magical
-          experience, thanks for the integration @gitpod!
-        </p>`,
-  },
-  {
-    name: "Brendan O’Leary",
-    avatar: "brendan-o-leary.jpg",
-    org: `
-      <span>
-        @GitLab
-      </span>
-    `,
-    role: "Dev. Evangelist",
-    text: `
-        <p>
-          I just discovered the @gitlab @gitpod integration is alive on http://GitLab.com (released in 13.4 behind a feature flag). And it's AMAZING https://docs.gitlab.com/ee/integration....
-          .
-        </p>
-        <p>Now I can code from *anywhere*</p>
-      `,
-  },
-  {
-    name: "Joonas Lehtinen",
-    avatar: "joonas-lehtinen.png",
-    org: `
-      <span>
-        @vaadin
-      </span>
-    `,
-    role: "Co-founder",
-    text: `
-        <p>
-          Wow - @gitpod is a brilliant way of evaluating a framework without installing anything.
-        </p>
-        <p>
-          Launch gitpod for @vaadin at https://vaadin.com/start/v14 ("Online workspace" tab). You'll have app running and will be editing code in 3min from clicking "Launch" button.
-        </p>
-    `,
-  },
-  {
-    name: "Yo",
-    avatar: "yogi.jpg",
-    org: `
-      <span>
-        @Taskord
-      </span>
-    `,
-    role: "Creator",
-    text: `
-        <p>
-          Now contributing to @gitlab is a cakewalk with @gitpod 🎉!
-        </p>
-        <p>Already started my game! #100DaysOfCode</p>
-      `,
-  },
-  {
-    name: "Senior Enterprise Geek",
-    avatar: "k33g.jpg",
-    org: `
-      <span>
-        @GitLab
-      </span>
-    `,
-    role: "Senior Technical Account Manager",
-    text: `
-        <p>
-          Today is a great day, we added the @gitpod support to the @golo_lang repository. So now you can start hacking @golo_lang in almost only one click. Enjoy 🎉
-        </p>
-        <p>gitpod.io/#https://githu...</p>
       `,
   },
 ];
