@@ -38,6 +38,6 @@ RUN file="$HOME/.bashrc.d/770-scm_token.sh" \
     && printf 'export SCM_TOKEN="$(%s)"\n' "gp credential-helper get <<<host=\${scm_name}.com | sed -n 's/^password=//p'" >> "${file}"
 ```
 
-- Follow [see in action](/docs//docs/configure/workspaces#see-it-in-action)
+- Follow [see in action](//docs/configure/workspaces#see-it-in-action)
 
 Now you can use `$SCM_TOKEN` environment variable after you commit and create a new workspace, this variable will contain an API token based on the Git context (i.e. Gitlab/GitHub/Bitbucket)
