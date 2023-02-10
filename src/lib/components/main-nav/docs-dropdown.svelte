@@ -86,7 +86,7 @@
     bind:this={wrapperEl}
   >
     <div
-      class="grid grid-cols-2 mr-xx-small gap-x-large pt-x-small pb-x-large"
+      class="grid grid-cols-2 mr-xx-small gap-0 gap-x-large gap-y-macro pt-x-small pb-x-large"
       bind:this={linksGrid}
     >
       {#each docsLinks as { href, text, description }}
