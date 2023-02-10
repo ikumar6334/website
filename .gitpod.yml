@@ -25,6 +25,10 @@ tasks:
   - name: Forward Cypress Base URL
     command: |
       export CYPRESS_BASE_URL=$(gp url 3000)
+  - name: ADRs (Architecture Decision Records)
+    command: |
+      npm install -g adr
+      adr list
 
 github:
   prebuilds:
