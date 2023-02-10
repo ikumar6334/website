@@ -5,7 +5,6 @@
   import LinkButton from "./ui-library/link-button/link-button.svelte";
 
   export let cards: CardType[];
-  export let headingLevel: "h5" | "h4" | "h3" | "h2";
   export let iconClassNames: string = "h-8 w-8 text-initial ml-2";
 </script>
 
@@ -28,10 +27,10 @@
     {#each cards as card}
       <Card
         textAlign="left"
+        titleClassNames="!text-left h4"
         {card}
         class="sm:mx-macro mb-micro justify-start sm:w-2/3"
         {iconClassNames}
-        {headingLevel}
       />
     {/each}
   </div>

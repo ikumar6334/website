@@ -61,7 +61,7 @@
 <IntegrateDontDictate class="py-small" />
 <Features features={otherFeatures} />
 <Section>
-  <HomepageResources {cards} headingLevel="h5" />
+  <HomepageResources {cards} />
 </Section>
 <Testimonials
   title="Trusted by the best developer teams"
