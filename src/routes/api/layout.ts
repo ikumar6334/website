@@ -13,7 +13,7 @@ const CACHE_PATH = path.resolve("stars-cache.json");
 let stars: number;
 let bannerData: { display: boolean; startDate: Date; endDate: Date };
 
-export const get: RequestHandler = async () => {
+export const GET: RequestHandler = async () => {
   if (USE_CACHE) {
     try {
       const cacheObject = JSON.parse(fs.readFileSync(CACHE_PATH, "utf8"));

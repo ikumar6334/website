@@ -59,7 +59,7 @@ async function sendEmail(
   }
 }
 
-export const post: RequestHandler = async ({ request }) => {
+export const POST: RequestHandler = async ({ request }) => {
   const body = await request.json();
   const email: Email = body! as Email;
   const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY || "no-key";
