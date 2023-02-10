@@ -3,7 +3,7 @@
 
   export let navItem: any;
   const { href, highlight, label, isExternal } = navItem;
-  const isPrefecthable = isExternal ? undefined : true;
+  const isPrefecthable = isExternal ? "" : true;
 
   $: isActivePage =
     $page.url.pathname === "/"
@@ -34,7 +34,7 @@
     aria-label={highlight && `Highlighted page: ${label}`}
     {href}
     on:click
-    sveltekit:prefetch={isPrefecthable}
+    data-sveltekit-preload-data={isPrefecthable}
     class="sm:text-body text-p-large hover:text-important focus:text-important active:text-important"
   >
     {label}
