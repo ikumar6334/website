@@ -1,7 +1,7 @@
 import type { RequestHandler } from "@sveltejs/kit";
 import { removeTrailingSlash } from "$lib/utils/helpers";
 
-export const GET: RequestHandler = async () => {
+export const get: RequestHandler = async () => {
   const website = "https://www.gitpod.io";
   const staticPages = Object.keys(
     import.meta.glob("/src/routes/**/!(_)*.{svelte,md}", { eager: true })

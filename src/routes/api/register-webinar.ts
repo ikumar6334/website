@@ -8,7 +8,7 @@ const signupTypeToSheetTitle = {
     "Getting started with Gitpod Nuaware registrations",
 };
 
-export const POST: RequestHandler = async ({ request }) => {
+export const post: RequestHandler = async ({ request }) => {
   try {
     const body = await request.json();
 

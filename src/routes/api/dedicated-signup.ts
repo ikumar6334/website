@@ -5,7 +5,7 @@ const map = {
   "dedicated-signup": "Gitpod Dedicated Signups",
 };
 
-export const POST: RequestHandler = async ({ request }) => {
+export const post: RequestHandler = async ({ request }) => {
   try {
     const body = await request.json();
     console.log(body);

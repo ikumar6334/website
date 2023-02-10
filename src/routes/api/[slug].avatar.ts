@@ -1,6 +1,6 @@
 import type { RequestHandler } from "@sveltejs/kit";
 
-export const GET: RequestHandler = async ({ params }) => {
+export const get: RequestHandler = async ({ params }) => {
   const res = await fetch(`https://www.github.com/${params.slug}.png`);
   const buffer = Buffer.from(await res.arrayBuffer());
   return {

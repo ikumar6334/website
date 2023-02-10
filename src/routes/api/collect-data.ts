@@ -17,7 +17,7 @@ const allowedEvents = [
   "whitepaper_downloaded",
 ];
 
-export const POST: RequestHandler = async ({ request }) => {
+export const post: RequestHandler = async ({ request }) => {
   const body = (await request.json()) as AnalyticsPayload;
   const ip = request.headers.get("x-forwarded-for")?.split(",")[0];
   if (!ip) {
