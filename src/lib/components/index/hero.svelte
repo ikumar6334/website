@@ -1,6 +1,5 @@
 <script lang="ts">
   import LinkButton from "$lib/components/ui-library/link-button";
-  import GithubMark from "../svgs/github-mark.svelte";
   import ButtonsWrapper from "../buttons-wrapper.svelte";
 </script>
 
@@ -82,8 +81,8 @@
       Always<br /> ready to code.
     </h1>
     <p id="choose-project-observer-target" class="hero__intro-text text-large">
-      Spin up fresh cloud development environments<br />
-      for each task, fully automated, in seconds.
+      Ship software faster with secure cloud <br />
+      development environments that just work.
     </p>
     <div class="hero__action">
       <ButtonsWrapper class="mt-x-small lg:mt-small mb-x-small">
@@ -96,18 +95,6 @@
           >Contact sales</LinkButton
         >
       </ButtonsWrapper>
-      <div>
-        <div class="hero__icons">
-          <img src="/svg/gitlab.svg" alt="GitLab logo" title="GitLab logo" />
-          <GithubMark />
-          <img
-            src="/svg/bitbucket.svg"
-            alt="Bitbucket logo"
-            title="Bitbucket logo"
-          />
-        </div>
-        <p class="text-p-small mt-macro">Start from any Git context.</p>
-      </div>
     </div>
   </div>
   <div class="hero__illustration">

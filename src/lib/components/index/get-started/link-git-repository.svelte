@@ -2,11 +2,11 @@
   import LinkButton from "$lib/components/ui-library/link-button";
 </script>
 
-<h3>Connect Git repository</h3>
+<h3>Get started with any project</h3>
 <p class="max-w-md mx-auto">
   Select a Git provider to start with an existing project from any Git context.
 </p>
-<div class="inline-flex flex-col my-large space-y-4">
+<div class="inline-flex flex-col my-large space-y-2">
   <LinkButton
     href="https://gitpod.io/workspaces/"
     variant="unstyled"
@@ -91,12 +91,12 @@
   </LinkButton>
   <!-- <a href="#" class="link--light-grey">Third-party providers ↗</a> -->
 </div>
-<p class="text-large">
+<p class="text-lg">
   Or prefix any GitLab, GitHub or Bitbucket URL with
   <br />
   <span
     class="text-dark-grey inline-block px-micro mt-macro bg-tertiary rounded-xl"
   >
-    gitpod.io/#
+    <code>gitpod.io/#</code>
   </span>
 </p>

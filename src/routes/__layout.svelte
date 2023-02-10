@@ -36,7 +36,6 @@
   import { isEurope, removeTrailingSlash } from "$lib/utils/helpers";
   import Cookies from "js-cookie";
   import { cookies } from "$lib/constants";
-  import ContactWidget from "$lib/components/contact-widget.svelte";
   import { key as starsKey } from "$lib/components/main-nav/github-stars.svelte";
 
   export let bannerData: BannerData;
@@ -99,7 +98,6 @@
 
 <LayoutRoot>
   <Nav />
-  <ContactWidget />
   <LayoutMain>
     <slot />
   </LayoutMain>

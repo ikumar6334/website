@@ -6,12 +6,12 @@
 <div>
   <img
     class="object-cover dark:hidden"
-    src="/images/community/squad.png"
+    src="/images/community/squad.webp"
     alt="4 3d modeled characters representing a squad of community heroes"
   />
   <img
     class="hidden dark:block object-cover"
-    src="/images/community/squad-dark.png"
+    src="/images/community/squad-dark.webp"
     alt="4 3d modeled characters representing a squad of community heroes"
   />
   <div class="mt-small md:mt-xx-large">

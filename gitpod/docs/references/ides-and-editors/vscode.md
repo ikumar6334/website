@@ -192,7 +192,7 @@ See [Workspace Trust](https://code.visualstudio.com/docs/editor/workspace-trust)
 
 ## FAQs
 
-### When opening VS Code Destkop, the owner token wasn't copied to my clipboard, where can I find it?
+### When opening VS Code Desktop, the owner token wasn't copied to my clipboard, where can I find it?
 
 When opening VS Code Desktop, if you are being prompted for the owner token password, but cannot copy it to clipboard, you can find the password on the gitpod [workspaces page](https://gitpod.io/workspaces) under "connect via SSH".
 
@@ -216,6 +216,18 @@ If you're unsure whether you're connecting via the local companion, or SSH Gatew
 ![The SSH host information shown in the bottom left of VS Code Desktop](/images/editors/show-ssh-connection-vscode-light-theme.png)
 ![The SSH host information shown in the bottom left of VS Code Desktop](/images/editors/show-ssh-connection-vscode-dark-theme.png)
 _The SSH host information shown in the bottom left of VS Code Desktop_
+
+### I'm being asked to choose the `platform of the remote host`. What should I choose?
+
+When connecting, sometimes VS Code Desktop fails to automatically detect the host OS of a Gitpod workspace, asking the following: `Select the platform of the remote host "{id}"`.
+
+No matter what the OS is on your computer, you should always choose `Linux` as the remote host platform, since this is the operating system all Gitpod workspaces run on.
+
+If you choose another option, you may encounter an error like this:
+
+```text
+Resolver error: Error: Got bad result from install script
+```
 
 ### I'm being prompted for a password/passphrase but VS Code Desktop cannot authenticate?
 

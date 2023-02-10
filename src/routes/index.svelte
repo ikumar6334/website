@@ -17,14 +17,13 @@
   import Testimonials from "$lib/components/index/testimonials.svelte";
   import GetStarted from "$lib/components/index/get-started/index.svelte";
   import OpenGraph from "$lib/components/open-graph.svelte";
-  import SpinUp from "$lib/components/index/spin-up.svelte";
   import Section from "$lib/components/section.svelte";
-  import Feature from "$lib/components/feature.svelte";
-  import Resources from "$lib/components/resources.svelte";
+  import HomepageResources from "$lib/components/homepage-resources.svelte";
   import AnimatedLogos from "$lib/components/animated-logos.svelte";
-  import UsedBy from "$lib/components/index/used-by.svelte";
   import Titles from "$lib/components/index/titles.svelte";
   import Newsletter from "$lib/components/forms/newsletter.svelte";
+  import CommunityCallout from "$lib/components/index/community-callout.svelte";
+  import IntegrateDontDictate from "$lib/components/index/integrate-dont-dictate.svelte";
 </script>
 
 <OpenGraph
@@ -48,43 +47,21 @@
   <link rel="preload" as="image" href="/images/index/rubymine.webp" />
   <link rel="preload" as="image" href="/images/index/vim.webp" />
   <link rel="preload" as="image" href="/images/index/webstorm.webp" />
-  <link
-    rel="preload"
-    as="image"
-    href="/images/index/gitpod-browser-extension.webp"
-  />
+  <link rel="preload" as="image" href="/images/index/rider.webp" />
 </svelte:head>
 
 <Hero />
 <AnimatedLogos />
 <Titles />
+<SectionScreenshot />
 <ChooseProject />
 <div id="choose-project-observer-target-bottom">
   <Features {features} />
 </div>
-<SectionScreenshot />
-<UsedBy title="Used by +750k developers" class="py-small" />
+<IntegrateDontDictate class="py-small" />
 <Features features={otherFeatures} />
 <Section>
-  <Resources {cards} headingLevel="h2" />
-</Section>
-<Section>
-  <Feature
-    feature={{
-      title: "Backed by a strong community",
-      paragraph:
-        "Community is at the heart of Gitpod. <br/><br/>Join 5000+ members on our thriving Discord server to learn, collaborate, and connect with Gitpod developers. ",
-      moreButton: {
-        text: "Go to community page",
-        href: "/community",
-      },
-      image: {
-        src: "/images/community/squad-background.jpg",
-        alt: "Community Heroes",
-        classNames: "rounded-2xl",
-      },
-    }}
-  />
+  <HomepageResources {cards} headingLevel="h5" />
 </Section>
 <Testimonials
   title="Trusted by the best developer teams"
@@ -92,6 +69,6 @@
   class="-mb-20"
   {testimonials}
 />
+<CommunityCallout />
 <GetStarted />
-<SpinUp />
 <Newsletter />

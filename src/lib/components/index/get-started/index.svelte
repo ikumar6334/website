@@ -8,20 +8,20 @@
 </script>
 
 <Section id="get-started" class="pt-20">
-  <h2 class="!mb-x-small text-center text-h2">Get started now</h2>
+  <h2 class="!mb-x-small text-center text-h2">Get started for free</h2>
   <div
     class="cards-container flex flex-col lg:flex-row max-w-[600px] lg:max-w-none gap-4 mx-auto"
     class:justify-center={checked}
     class:justify-between={!checked}
   >
     <Card
-      class="shadow-normal p-xx-small sm:py-small basis-[50%] sm:px-x-small xl:p-medium text-center"
+      class="p-xx-small sm:py-small basis-[50%] sm:px-x-small xl:p-medium text-center"
       size="small"
     >
       <LinkGitRepository />
     </Card>
     <Card
-      class="shadow-normal p-xx-small sm:py-small  basis-[50%] sm:px-x-small xl:p-medium text-center"
+      class="p-xx-small sm:py-small  basis-[50%] sm:px-x-small xl:p-medium text-center"
       size="small"
     >
       <LaunchExampleWorkspace />
