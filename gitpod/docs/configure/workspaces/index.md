@@ -28,6 +28,8 @@ See the [.gitpod.yml reference](/docs/references/gitpod-yml) page for more.
 ### A gitpod.yml example
 
 ```yaml
+image: gitpod/workspace-full
+
 # Commands that will run on workspace start
 tasks:
   - name: Setup, Install & Build
@@ -45,21 +47,21 @@ ports:
 
 **Caption:** An example project configured to install, build and run a `yarn` project with a webserver, exposed on port 3000. On start, the webserver preview is opened automatically.
 
-### The workspace image file
+### The workspace image
 
-In addition to the `gitpod.yml` you can also specify a workspace image, which brings:
+In addition to the `gitpod.yml` you can also specify a workspace image for:
 
 1. Improved caching and performance
-2. Improved portability
-3. Leverage any existing Docker configurations
+2. Application portability
+3. Re-using an existing Dockerfile
 
-Currently, Gitpod supports Docker for workspace images.
+Currently, Gitpod only supports Docker for workspace images. The Dockerfile can either be kept alongside your Gitpod configuration, or you can consume an existing public, or private image.
 
 See [Workspace Image](/docs/configure/workspaces/workspace-image) for more.
 
-## Updating your Gitpod configuration
+## Creating a Gitpod configuration
 
-To create a `.gitpod.yml` use the `gp init` command (or `gp init -i` for interactive mode). This command is part of the [Gitpod CLI](/docs/references/gitpod-cli), which is included in all Gitpod workspaces by default.
+You can create a `.gitpod.yml` manually, or by using the `gp init` command (or `gp init -i` for interactive mode). The `gp` CLI tool is part of the [Gitpod CLI](/docs/references/gitpod-cli), which is included in all Gitpod workspaces by default.
 
 ```sh
 gp init
@@ -67,24 +69,52 @@ gp init
 
 See the [Gitpod CLI](/docs/references/gitpod-cli) page for more.
 
-## Testing your Gitpod configuration
+## Validating your Gitpod configuration
 
-You can test your `.gitpod.yml` using `gp rebuild` and [Debug Workspaces](/docs/configure/workspaces/debug-workspaces). A Debug Workspace runs a miniature workspace within your current workspace, applying the latest configuration and allowing you to troubleshoot workspace startup (ports, tasks, etc), image builds and more, without needing to commit and pollute your version history.
-
-To test your configuration changes:
-
-1. Run `gp rebuild` - This command will emit a Debug Workspace URL.
-2. Open the debug workspace to check your configuration.
-3. Update configuration in the original workspace, re-running `gp rebuild` if needed.
-
-<!-- TODO: Test if needs to be root -->
+You can test your configuration including your `.gitpod.yml` without leaving your worksapce or committing you changes by using the `gp rebuild` command. This command works using a [Debug Workspace](/docs/configure/workspaces/debug-workspaces), which you can think of as a mini workspace running in your workspace and allows you to troubleshoot workspace configuration (ports, tasks, etc) and more.
 
 <figure>
 <img class="shadow-medium w-full rounded-xl max-w-3xl mt-x-small" alt="Debug workspace startup and shutdown" src="/images/testing-changes/gp_rebuild.png">
     <figcaption>Debug workspace startup and shutdown</figcaption>
 </figure>
 
-> **Tip:** For improved configuration speed, consider using a large [Workspace Class](/docs/configure/workspaces/workspace-classes).
+You can use the `gp rebuild` command to test various configuration setups: simple workspace starts (without Prebuilds enabled), workspace starts using a Prebuild, or for debugging Prebuilds themselves. See below for the differences:
+
+| Command                        | Steps ran                     |
+| ------------------------------ | ----------------------------- |
+| `gp rebuild`                   | `before` + `init` + `command` |
+| `gp rebuild --from="prebuild"` | `before` + `command`          |
+| `gp rebuild --prebuild`        | `before` + `init`             |
+
+> **Tip:** For improved speed and convienience whilst updating your workspace configuration, consider starting your worksapce using a large [Workspace Class](/docs/configure/workspaces/workspace-classes).
+
+### Validating a workspace start (without Prebuilds configured)
+
+To validate a regular workspace start:
+
+1. Run `gp rebuild` to emit a Debug Workspace URL.
+2. Open the Debug Workspace and review your configuration.
+3. Update your configuration in the original workspace, and re-run `gp rebuild` (if needed).
+
+### Validating a workspace start (with Prebuilds configured)
+
+You can run `gp rebuild --from="prebuild"` to validate how a workspace start would look like when Prebuilds are enabled. If you don't have Prebuilds enabled, use the plain `gp rebuild` command.
+
+1. Run `gp rebuild --from="prebuild"` - This command will emit a Debug Workspace URL.
+2. Open the debug workspace to check your configuration.
+3. Update configuration in the original workspace, re-running `gp rebuild` if needed.
+
+> **Important:** This command runs the workspace _from_ a Prebuild not _as_ a prebuild. Meaning this produces the same environment that is created by a Prebuild process, before a workspace is subsequently started using it.
+
+### Validating a Prebuild
+
+You can run `gp rebuild --prebuild` to validate how a prebuild process would look upon completion (this runs `before` and `init` tasks, but not `command` tasks).
+
+1. Run `gp rebuild --prebuild` - This command will emit a Debug Workspace URL.
+2. Open the debug workspace to check your configuration.
+3. Update configuration in the original workspace, re-running `gp rebuild` if needed.
+
+> **Important:** This command runs the workspace _as_ a Prebuild not _from_ a prebuild. Meaning this produces the same environment that is created by a Prebuild process, before a workspace is subsequently started using it.
 
 ## Apply configuration changes
 

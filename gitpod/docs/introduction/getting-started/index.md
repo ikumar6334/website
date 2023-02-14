@@ -91,6 +91,8 @@ Now, every new workspace opened will run the steps defined in your `gitpod.yml`.
 ### A gitpod.yml example
 
 ```yaml
+image: gitpod/workspace-full
+
 # Commands that will run on workspace start
 tasks:
   - name: Setup, Install & Build
