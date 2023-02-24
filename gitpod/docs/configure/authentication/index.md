@@ -42,3 +42,14 @@ RUN file="$HOME/.bashrc.d/770-scm_token.sh" \
 - Follow [see in action](/docs/introduction/learn-gitpod/gitpod-yaml#see-it-in-action)
 
 Now you can use `$SCM_TOKEN` environment variable after you commit and create a new workspace, this variable will contain an API token based on the Git context (i.e. Gitlab/GitHub/Bitbucket)
+
+### How to use a private GitHub email or custom email for Git commits
+
+At the [https://gitpod.io/user/variables](variables) page, create two variables[[1](https://gitpod.io/user/account)] called:
+
+- GIT_COMMITTER_EMAIL
+- GIT_AUTHOR_EMAIL
+
+and set the custom email address as the value and `*/*` as the scope.
+
+Now all of your new workspaces should use them for Git commits. If you have a workspace running, you can restart it or run `eval "$(gp env -e)"` in it.
