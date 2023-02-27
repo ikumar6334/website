@@ -92,7 +92,7 @@
           size="large">Start for free</LinkButton
         >
         <LinkButton variant="cta" href="contact/sales" size="large"
-          >Contact sales</LinkButton
+          >Talk to an expert</LinkButton
         >
       </ButtonsWrapper>
     </div>

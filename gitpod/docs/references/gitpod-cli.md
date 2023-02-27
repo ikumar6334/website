@@ -327,7 +327,9 @@ gp docs
 
 ## rebuild
 
-Re-builds the workspace image, it's useful to validate and debug your [custom Workspace image](/docs/configure/workspaces/workspace-image#custom-base-image).
+> `gp rebuild` is currently in [Beta](/docs/help/public-roadmap/release-cycle) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/7671).
+
+Runs a debug workspace inside an existing Gitpod workspace. You can use this to quickly iterate on/debug your [.gitpod.yml](/docs/references/gitpod-yml) properties such as [tasks](/docs/configure/workspaces/tasks) or a [custom workspace image](/docs/configure/workspaces/workspace-image).
 
 ```sh
 gp rebuild

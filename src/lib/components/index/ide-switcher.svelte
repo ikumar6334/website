@@ -57,18 +57,17 @@
   }
 
   .icon-box {
-    height: 71px;
-    width: 71px;
+    height: 72px;
+    width: 72px;
 
     @media (max-width: 1140px) {
-      height: 60px;
-      width: 60px;
+      height: 62px;
+      width: 62px;
     }
 
     @media (max-width: 520px) {
-      height: 45px;
-      width: 45px;
-      border-radius: 10px;
+      height: 56px;
+      width: 56px;
     }
   }
 
@@ -80,15 +79,20 @@
       height: 36px;
       width: 36px;
     }
+  }
 
-    @media (max-width: 520px) {
-      height: 26px;
-      width: 26px;
+  .icon-ide-type {
+    height: 32px;
+    width: 32px;
+
+    @media (max-width: 1140px) {
+      height: 24px;
+      width: 24px;
     }
   }
 
   .grayed {
-    @apply shadow-lg hover:bg-white;
+    @apply shadow-lg hover:bg-white dark:hover:bg-black border-0 hover:border-divider hover:border;
   }
 
   .toggle-ide-type {
@@ -96,25 +100,37 @@
   }
 
   .default-ide-type {
-    @apply shadow-lg focus:bg-white dark:focus:bg-black;
+    @apply shadow-lg bg-card hover:border-divider hover:border;
+  }
+  .focused-ide-type {
+    @apply border-0 hover:!border-divider hover:!border;
   }
 </style>
 
-<div class="flex mt-14">
+<div
+  class="flex flex-col md:flex-row {ideType === 'browser'
+    ? 'justify-start'
+    : 'justify-between'} mt-14 md:space-x-8"
+>
   <div
-    class="inline-flex justify-start space-x-2"
+    class="flex {ideType === 'browser' ? 'mr-8' : ''}"
     class:checked
     class:inversed={isInversed}
     class:toggle-ide-type={!checked}
   >
-    <label class="flex-row items-center justify-center" for={id}>
+    <label class="mx-1 my-1 flex-row items-center justify-center" for={id}>
       <div
-        class="shadow-highlight flex-col icon-box relative flex items-center justify-center border-solid bg-card hover:bg-white dark:hover:bg-black focus:bg-white dark:group-focus:bg-black rounded-lg lgx:rounded-2xl transition duration-200 linear"
+        class="border-divider border-[3px] bg-white dark:bg-black flex-col icon-box relative flex items-center justify-center hover:bg-white dark:hover:bg-black focus:bg-white dark:focus:bg-black rounded-2xl transition duration-200 linear"
         class:default-ide-type={checked}
+        class:focused-ide-type={checked}
       >
-        <img src="/svg/index/desktop.svg" alt="Desktop" class="icon" />
+        <img
+          src="/svg/index/desktop.svg"
+          alt="Desktop"
+          class="icon-ide-type pt-1"
+        />
         <div
-          class="text-[10px] sm:text-xs font-semibold text-black dark:text-important group-focus:bg-white dark:group-focus:bg-black"
+          class="text-[10px] sm:text-xs font-semibold pt-1 text-black dark:text-important group-focus:bg-white dark:group-focus:bg-black"
         >
           Desktop
         </div>
@@ -133,14 +149,19 @@
           ` Toggle"}`}
       />
     </div>
-    <label class="flex-row items-center justify-center" for={id}>
+    <label class="mx-1 my-1 flex-row items-center justify-center" for={id}>
       <div
-        class="shadow-highlight flex-col icon-box relative flex items-center justify-center border-solid bg-card hover:bg-white dark:hover:bg-black focus:bg-white dark:group-focus:bg-black rounded-lg lgx:rounded-2xl transition duration-200 linear"
+        class="border-divider border-[3px] bg-white dark:bg-black flex-col icon-box relative flex items-center justify-center hover:bg-white dark:hover:bg-black focus:bg-white dark:group-focus:bg-black rounded-2xl transition duration-200 linear"
         class:default-ide-type={!checked}
+        class:focused-ide-type={!checked}
       >
-        <img src="/svg/index/browser.svg" alt="Browser" class="icon" />
+        <img
+          src="/svg/index/browser.svg"
+          alt="Browser"
+          class="icon-ide-type pt-1"
+        />
         <div
-          class="text-[10px] sm:text-xs font-semibold text-black dark:text-important"
+          class="text-[10px] sm:text-xs font-semibold pt-1 text-black dark:text-important"
         >
           Browser
         </div>
@@ -148,12 +169,10 @@
     </label>
   </div>
 
-  <div
-    class="grid grid-cols-3 space-y-2 sm:flex sm:flex-row sm:space-x-2 sm:space-y-0 ml-[72px] items-center w-full h-full "
-  >
+  <div class="flex flex-wrap items-center">
     {#each ides as { name, availibility, label, icon, screenshots }}
       <button
-        class="block relative cursor-pointer group justify-start"
+        class="relative mx-1 my-1 block cursor-pointer group justify-start"
         on:mouseenter={(e) => {
           handleMouseEnter(e, name);
         }}
@@ -163,16 +182,22 @@
         class:hidden={ideType === "browser" && !screenshots.browser}
       >
         <div
-          class="shadow-highlight icon-box relative flex items-center justify-center border-solid bg-card group-hover:bg-white dark:group-hover:bg-black group-focus:bg-white dark:group-focus:bg-black rounded-lg md:rounded-xl lgx:rounded-2xl transition duration-200 linear"
+          class="border-divider border-[3px] icon-box flex items-center justify-center border-solid bg-card group-hover:bg-white dark:group-hover:bg-black group-focus:bg-white dark:group-focus:bg-black rounded-2xl transition duration-200 linear"
           class:grayed={!(activeByDefaultName === name) &&
             !(activeIdeName === "vscode")}
           data-name={name}
         >
-          <img src="/svg/index/{icon}" alt={label} class="icon" />
+          <img
+            src="/svg/index/{icon}"
+            alt={label}
+            class="icon {name == 'vscode' || name == 'vim'
+              ? 'h-9 w-9'
+              : 'h-11 w-11'}"
+          />
         </div>
         {#if availibility}
           <div
-            class="hidden absolute -top-3 md:-top-3 left-5 -translate-x-1/2 md:transform-none items-center justify-center h-4 w-10 sm:h-5 sm:w-14 text-xs font-semibold text-black rounded-md sm:rounded-lg shadow-light"
+            class="hidden absolute -top-3 md:-top-3 left-5 -translate-x-1/2 md:transform-none items-center justify-center h-4 w-10 sm:h-5 sm:w-14 text-xs font-semibold text-black rounded-2xl shadow-light"
             class:bg-salmon={availibility === "soon"}
             class:bg-tertiary={availibility === "beta"}
           >

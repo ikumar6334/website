@@ -24,7 +24,7 @@ export const gitlab: Brand = {
 export const freeCodeCamp: Brand = {
   alt: "freeCodeCamp",
   logo: FreecodecampLogo,
-  transform: "scale(1.1)",
+  transform: "scale(1.4)",
 };
 
 export const google: Brand = {
@@ -76,16 +76,18 @@ export const codeInstitute: Brand = {
 export const jetbrains: Brand = {
   logo: Jetbrains,
   alt: "JetBrains",
+  transform: "scale(0.95)",
 };
 
 export const fourGeeks: Brand = {
   logo: FourGeeks,
   alt: "Four Geeks",
+  transform: "scale(1.0)",
 };
 
 export const brands: Brand[] = [
   gitlab,
-  freeCodeCamp,
+  jetbrains,
   google,
   factorial,
   dataStax,
@@ -94,6 +96,8 @@ export const brands: Brand[] = [
   astrato,
   redwood,
   codeInstitute,
+  fourGeeks,
+  freeCodeCamp,
 ];
 
 export const logosAnimated: Brand[] = [
@@ -127,6 +131,15 @@ export const projects: Project[] = [
     trackingName: "python",
   },
   {
+    logo: "svg/projects/java.svg",
+    title: "Java",
+    githubUrl: "https://github.com/gitpod-io/spring-petclinic",
+    gitlabUrl: "https://gitlab.com/gitpod/spring-petclinic",
+    bitbucketUrl: "https://bitbucket.org/gitpod/spring-petclinic",
+    alt: "Java",
+    trackingName: "java",
+  },
+  {
     logo: "svg/projects/go.svg",
     title: "Golang",
     githubUrl: "https://github.com/gitpod-io/example-golang-cli",
@@ -139,15 +152,6 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/gitpod-io/example-rust-cli",
     alt: "Rust",
     trackingName: "rust",
-  },
-  {
-    logo: "svg/projects/java.svg",
-    title: "Java",
-    githubUrl: "https://github.com/gitpod-io/spring-petclinic",
-    gitlabUrl: "https://gitlab.com/gitpod/spring-petclinic",
-    bitbucketUrl: "https://bitbucket.org/gitpod/spring-petclinic",
-    alt: "Java",
-    trackingName: "java",
   },
   {
     logo: "svg/projects/svelte.svg",

@@ -30,7 +30,7 @@ export const screencasts: Screencast[] = [
       "How to get a full dev environment in your browser with the click of a button and be immediately ready-to-code.",
     duration: 119,
     tile: "screencast-1.jpg",
-    youtubeId: "w65POyu3ZUQ",
+    youtubeId: "ij1msCffQZA",
     relatedDocs: [
       { path: "/docs/", title: "Introduction to Gitpod" },
       { path: "/docs/introduction/getting-started", title: "Getting started" },
@@ -63,7 +63,7 @@ export const screencasts: Screencast[] = [
       "Understanding the automation benefits that arise from the concept of dev-environment-as-code.",
     duration: 245,
     tile: "screencast-3.jpg",
-    youtubeId: "fA2fpqP1xaM",
+    youtubeId: "E95oV_iqUtI",
     relatedDocs: [
       { path: "/docs/configure", title: "Configure Your Project" },
       { path: "/docs/references/gitpod-yml", title: ".gitpod.yml" },
@@ -102,7 +102,7 @@ export const screencasts: Screencast[] = [
       "How to make Gitpod load in a blink by prebuilding your project ahead-of-time, continuously.",
     duration: 135,
     tile: "screencast-5.jpg",
-    youtubeId: "ZtlJ0PakUHQ",
+    youtubeId: "DwkoOz1GSVg",
     relatedDocs: [
       {
         path: "/docs/configure/projects/prebuilds",
@@ -129,12 +129,28 @@ export const screencasts: Screencast[] = [
   },
   {
     nextScreencast: id++,
+    title: "Dotfiles from scratch 🎨",
+    description:
+      "Dotfiles are a way to customize your developer environment according to your personal needs",
+    duration: 207,
+    tile: "screencast-6.jpg",
+    youtubeId: "00dif9QWXNU",
+    relatedDocs: [
+      {
+        path: "/docs/configure/user-settings/dotfiles",
+        title: "Dotfiles",
+      },
+    ],
+    tags: ["Customisations"],
+  },
+  {
+    nextScreencast: id++,
     title: "Collaborating With Your Team 🤝",
     description:
       "How to collaborate effectively with Gitpod's Shared Workspaces and Snapshots.",
     duration: 196,
     tile: "screencast-7.jpg",
-    youtubeId: "TrY15zN98p8",
+    youtubeId: "HcKlXfKpolM",
     relatedDocs: [
       {
         path: "/docs/configure/workspaces/collaboration",

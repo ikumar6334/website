@@ -21,15 +21,13 @@
       >.
     </p>
   </div>
-  <div
-    class="inline-flex max-w-8xl mt-small justify-items-start flex-wrap sm:flex-nowrap"
-  >
+  <div class="flex flex-wrap mt-x-small sm:mt-small justify-center">
     {#each cards as card}
       <Card
         textAlign="left"
         titleClassNames="!text-left h4"
         {card}
-        class="sm:mx-macro mb-micro justify-start sm:w-2/3"
+        class="sm:mx-macro mb-micro justify-start !w-72"
         {iconClassNames}
       />
     {/each}
@@ -41,7 +39,7 @@
     <LinkButton
       href="/contact/sales?subject=Enterprise"
       class="items-center"
-      variant="gray">Contact sales</LinkButton
+      variant="gray">Talk to an expert</LinkButton
     >
   </div>
 </Section>

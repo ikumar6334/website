@@ -20,6 +20,11 @@
     </h2>
     <ol class="max-w-[285px] mx-auto my-x-small">
       <li>
+        <a rel="nofollow" href="https://ch.linkedin.com/in/elliot-w-27962779"
+          >Elliot Ward</a
+        > from Snyk.
+      </li>
+      <li>
         <a
           rel="nofollow"
           href="https://www.linkedin.com/in/swapnil-kothawade-813854a7"

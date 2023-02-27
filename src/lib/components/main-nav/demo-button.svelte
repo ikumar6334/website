@@ -8,5 +8,5 @@
   class="{clazz} flex items-center justify-center"
   href="/contact/sales?subject=Enterprise"
   variant="tertiary"
-  size="medium">Contact sales</LinkButton
+  size="medium">Talk to an expert</LinkButton
 >

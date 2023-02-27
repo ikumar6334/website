@@ -11,7 +11,6 @@
   import UsedBy from "$lib/components/index/used-by.svelte";
   import Header from "$lib/components/header.svelte";
   import LinkButton from "$lib/components/ui-library/link-button";
-  import Transparency from "$lib/components/security/transparency-is-key.svelte";
 </script>
 
 <OpenGraph
@@ -53,7 +52,6 @@
   style="margin-top: 0"
 />
 <Secure />
-<Transparency />
 <div id="program">
   <Program />
 </div>

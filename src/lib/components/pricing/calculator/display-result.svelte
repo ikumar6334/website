@@ -73,8 +73,8 @@
   <div>
     {#if members >= 100}
       <p>
-        For large organizations of 100+ members, please contact sales to receive
-        a custom quote.
+        For large organizations of 100+ members, please Talk to an expert to
+        receive a custom quote.
       </p>
       <br />
       <LinkButton

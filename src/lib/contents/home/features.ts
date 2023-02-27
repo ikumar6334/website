@@ -90,7 +90,7 @@ export const otherFeatures: Feature[] = [
   //     "Gitpod provisions powerful Linux containers under the hood. A Linux shell with root/sudo, a file system, Docker and all other tools and binaries that run on Linux. One OS for both dev and prod.",
   //   moreButton: {
   //     href: "https://gitpod.io/workspaces/",
-  //     text: "Try now",
+  //     text: "Start for free",
   //   },
   //   terminal: {
   //     source: linuxSource,
@@ -157,4 +157,115 @@ export const secondaryFeatures: Card[] = [
     title: "Collaborate easily",
     text: "Enable faster collaboration across all team members, in realtime.</br></br>With Gitpod, teams can work on several workspaces in parallel and share them in seconds.",
   },
+];
+
+/**Dedicated Features
+ * Using on /self-hosted page
+ *
+ */
+
+export const maximizeControl: Feature = {
+  title: "Full speed and flexibility",
+  paragraph:
+    "The maintenance and operation of your single-tenant instance are fully managed by us.</br></br>Your team always works with the latest version of Gitpod.",
+  lottie: {
+    src: "/lottie/edit_workspace.json",
+    id: "edit_workspace",
+  },
+};
+
+export const devsDontCareAboutMachines: Feature = {
+  title: "Maximize compliance and control",
+  paragraph:
+    "Meet complex compliance and deployment needs with an installation of Gitpod in your region of choice.</br></br>Increase data protection and isolation with private connections.",
+  previewComponent: Workspaces,
+};
+
+export const dedicatedFeatures: Feature[] = [
+  maximizeControl,
+  devsDontCareAboutMachines,
+];
+
+/**Collaboration Features,
+ * Using on /solutions/collaboration page
+ *
+ */
+
+export const parallelDevelopment: Feature = {
+  title: "A new workspace with a single click",
+  paragraph:
+    "Multiple ephemeral workspaces. Enable anyone on your team to work on fixing bugs, implementing features, reviewing pull request, all at the same time.",
+  lottie: {
+    src: "/lottie/edit_workspace.json",
+    id: "edit_workspace",
+  },
+};
+
+export const teamsCodeTogether: Feature = {
+  title: "Share workspaces in realtime",
+  paragraph:
+    "Collaborate on tasks without making changes to your dev environment. Share running workspaces for pair programming, use port forwarding or share a snapshot as a copy of your workspace with teammates.",
+  lottie: {
+    src: "/lottie/share_workspace.json",
+    id: "share-workspace",
+  },
+};
+
+export const worksOnAnyMachineFeatureForCollaboration: Feature = {
+  title: `Works on <t style="text-decoration-line: line-through; color: #999795;">my</t> any machine`,
+  paragraph: `No more "works on my machine" issues.</br></br> Gitpod creates an identical developer experience for everyone, on every machine.`,
+  image: {
+    src: "/images/features/works-on-any-machine.webp",
+    alt: "Works on any machine",
+    width: "100%",
+    height: "100%",
+  },
+};
+
+export const collaborationFeatures: Feature[] = [
+  parallelDevelopment,
+  teamsCodeTogether,
+  worksOnAnyMachineFeatureForCollaboration,
+];
+
+/**Onboarding Features,
+ * Using on /solutions/onboarding page
+ *
+ */
+
+export const worksOnAnyMachineFeatureForOnboarding: Feature = {
+  title: `Works on <t style="text-decoration-line: line-through; color: #999795;">my</t> any machine`,
+  paragraph:
+    "With a single click, developers can spin up a perfectly configured workspace in a container in the cloud - independent of the device, operating system, or IDE they use.",
+  image: {
+    src: "/images/features/works-on-any-machine.webp",
+    alt: "Works on any machine",
+    width: "100%",
+    height: "100%",
+  },
+};
+
+export const onboardDevsWithOneClick: Feature = {
+  title: "Onboard developers with one click",
+  paragraph:
+    "Developers are ready to code at the click of the button. Internal and external developers become effective on day 1.",
+  lottie: {
+    src: "/lottie/edit_workspace.json",
+    id: "edit_workspace",
+  },
+};
+
+export const debugFasterThenEver: Feature = {
+  title: "Debug faster than ever",
+  paragraph:
+    "Reduce the number of support requests in half and decrease the time spent on them to mere minutes.",
+  terminal: {
+    source: terminalSource,
+  },
+};
+
+export const onboardFeatures: Feature[] = [
+  worksOnAnyMachineFeatureForOnboarding,
+  onboardDevsWithOneClick,
+  debugFasterThenEver,
 ];

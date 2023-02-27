@@ -29,7 +29,7 @@ ports:
 
 To see a full reference of all available properties, please refer to the [`.gitpod.yml reference`](/docs/references/gitpod-yml) page.
 
-`youtube: fA2fpqP1xaM`
+`youtube: E95oV_iqUtI`
 
 ## How to provide the .gitpod.yml config file
 

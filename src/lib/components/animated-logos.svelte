@@ -17,7 +17,7 @@
 
     logosWrappers.forEach(async (logoWrapper, i) => {
       const logos = Array.from(logoWrapper.children);
-      await sleep(900 * i);
+      await sleep(1400 * i);
 
       setInterval(() => {
         let temp = logos[0];
@@ -28,7 +28,7 @@
         logos[0].classList.add("hide", "to-top");
         logos[1].classList.remove("hide", "to-top", "to-bottom");
         logos[2].classList.add("hide", "to-bottom");
-      }, 3800);
+      }, 5600);
     });
   });
 </script>
