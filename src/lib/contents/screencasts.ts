@@ -28,7 +28,7 @@ export const screencasts: Screencast[] = [
     title: "Getting started with Gitpod 🍊",
     description:
       "How to get a full dev environment in your browser with the click of a button and be immediately ready-to-code.",
-    duration: 119,
+    duration: 180,
     tile: "screencast-1.jpg",
     youtubeId: "ij1msCffQZA",
     relatedDocs: [
@@ -61,7 +61,7 @@ export const screencasts: Screencast[] = [
     title: "Fully Automate Your Dev Setup ⚡️",
     description:
       "Understanding the automation benefits that arise from the concept of dev-environment-as-code.",
-    duration: 245,
+    duration: 386,
     tile: "screencast-3.jpg",
     youtubeId: "E95oV_iqUtI",
     relatedDocs: [
@@ -100,7 +100,7 @@ export const screencasts: Screencast[] = [
     title: "Continuously Prebuild Your Project 💻",
     description:
       "How to make Gitpod load in a blink by prebuilding your project ahead-of-time, continuously.",
-    duration: 135,
+    duration: 247,
     tile: "screencast-5.jpg",
     youtubeId: "DwkoOz1GSVg",
     relatedDocs: [
@@ -132,7 +132,7 @@ export const screencasts: Screencast[] = [
     title: "Dotfiles from scratch 🎨",
     description:
       "Dotfiles are a way to customize your developer environment according to your personal needs",
-    duration: 207,
+    duration: 2489,
     tile: "screencast-6.jpg",
     youtubeId: "00dif9QWXNU",
     relatedDocs: [
@@ -148,7 +148,7 @@ export const screencasts: Screencast[] = [
     title: "Collaborating With Your Team 🤝",
     description:
       "How to collaborate effectively with Gitpod's Shared Workspaces and Snapshots.",
-    duration: 196,
+    duration: 182,
     tile: "screencast-7.jpg",
     youtubeId: "HcKlXfKpolM",
     relatedDocs: [
@@ -257,7 +257,6 @@ export const screencasts: Screencast[] = [
     tags: ["Advanced"],
   },
   {
-    screencastNumber: 15,
     title: "Local Companion App 🤖",
     description: "Learn how to use Local Companion App.",
     duration: 191,
@@ -272,7 +271,6 @@ export const screencasts: Screencast[] = [
     tags: ["Advanced"],
   },
   {
-    screencastNumber: 16,
     title: "Launching OpenVSCode server 💻",
     description:
       "Learn how to runs the latest VS Code on a remote machine accessed through a modern web browser.",

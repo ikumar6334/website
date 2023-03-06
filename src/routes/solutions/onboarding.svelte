@@ -24,10 +24,8 @@
   }}
 />
 
-<Section class="flex flex-col lg:flex-row">
-  <div
-    class="items-center justify-between max-w-7xl mx-auto mt-small mb-x-large"
-  >
+<div class="flex flex-col lg:flex-row sm:mt-x-large">
+  <div class="items-center justify-between max-w-7xl mx-auto mt-small">
     <h2 class="h1 !mb-micro md:!mb-x-small max-w-xl">
       Onboard developers to new projects quickly
     </h2>
@@ -43,21 +41,17 @@
     }}
     svgClazz="h-14 w-12"
   />
-</Section>
-<Section>
+</div>
+<div class="mt-xxx-large mb-x-large sm:mb-0">
   <AnimatedLogos />
-</Section>
+</div>
 <Section id="new-hire-to-coding-in-under-an-hour">
   <h3 class="text-center text-3xl sm:text-5xl font-bold">
     New hire to coding in under an hour
   </h3>
-  <div>
-    <Features features={onboardFeatures} />
-  </div>
+  <Features features={onboardFeatures} class="!mt-x-large" />
 </Section>
-
 <Section>
   <Quotes {quotes} class="max-w-7xl mx-auto" />
 </Section>
-
 <Explore />

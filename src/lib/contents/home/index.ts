@@ -24,7 +24,7 @@ export const gitlab: Brand = {
 export const freeCodeCamp: Brand = {
   alt: "freeCodeCamp",
   logo: FreecodecampLogo,
-  transform: "scale(1.1)",
+  transform: "scale(1.4)",
 };
 
 export const google: Brand = {
@@ -76,11 +76,13 @@ export const codeInstitute: Brand = {
 export const jetbrains: Brand = {
   logo: Jetbrains,
   alt: "JetBrains",
+  transform: "scale(0.95)",
 };
 
 export const fourGeeks: Brand = {
   logo: FourGeeks,
   alt: "Four Geeks",
+  transform: "scale(1.0)",
 };
 
 export const brands: Brand[] = [

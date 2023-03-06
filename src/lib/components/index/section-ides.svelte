@@ -31,15 +31,17 @@
 
 <Section>
   <div class="row">
-    <h3 class="text-center text-3xl sm:text-5xl	font-bold">What's a CDE?</h3>
+    <h3 class="text-left sm:text-center text-3xl sm:text-5xl	font-bold">
+      What's a CDE?
+    </h3>
     <p
-      class="text-center text-lg sm:text-2xl mt-xx-small mb-x-small mx-auto max-w-4xl"
+      class="text-left sm:text-center text-lg sm:text-2xl mt-xx-small mb-x-small mx-auto max-w-4xl"
     >
       CDEs are high-powered, automated development environments in the cloud.
       They are perfectly configured for each task enabling instant onboarding
       and collaboration.
     </p>
-    <div class="text-center m-auto mb-x-small">
+    <div class="text-left sm:text-center m-auto mb-x-small">
       <LinkButton variant="gray" size="medium" href="/cde"
         >Learn more about CDEs</LinkButton
       >

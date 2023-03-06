@@ -5,12 +5,33 @@
   export { clazz as class };
 </script>
 
+<style lang="postcss">
+  .icon {
+    height: 45px;
+    width: 45px;
+
+    @media (max-width: 1140px) {
+      height: 41px;
+      width: 41px;
+    }
+  }
+  .ide-icon {
+    height: 46px;
+    width: 46px;
+
+    @media (max-width: 1140px) {
+      height: 42px;
+      width: 42px;
+    }
+  }
+</style>
+
 <Card size="medium" class="m-auto shadow-highlight w-10/12">
   <Section class="text-center {clazz}" {...$$restProps}>
-    <h2 class="text-[32px] text-left ml-4 sm:ml-16">
+    <h2 class="text-2xl sm:text-[32px] text-left ml-4 sm:ml-16">
       Integrate, don't dictate
     </h2>
-    <p class="text-left text-2xl ml-4 sm:ml-16 mb-8">
+    <p class="text-left text-lg sm:text-2xl ml-4 sm:ml-16 mb-8">
       Control every detail of your developer experience.
     </p>
     <div class="flex flex-wrap items-center justify-evenly mb-6 ml-6 mr-6">
@@ -19,12 +40,14 @@
         <div
           class="mt-4 text-left items-left bg-sand-light dark:bg-black py-micro pl-xx-small pr-medium text-p-small rounded-2xl border border-transparent w-64 sm:w-80"
         >
-          <p class="text-lg text-important font-bold">Connect Git provider</p>
+          <p class="text-sm sm:text-lg text-important font-bold">
+            Connect Git provider
+          </p>
 
-          <div class="flex justify-left items-center mt-4 gap-x-2 sm:gap-x-7">
-            <img src="/svg/gitlab.svg" alt="GitLab" class="h-12 w-12" />
+          <div class="flex justify-left items-center mt-4 gap-x-4 sm:gap-x-6">
+            <img src="/svg/gitlab.svg" alt="GitLab" class="icon" />
             <svg
-              class="h-12 w-12"
+              class="icon"
               viewBox="0 0 29 30"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -36,8 +59,7 @@
                 class="fill-black dark:fill-white"
               />
             </svg>
-            <!-- <img src="/svg/github.svg" alt="GitHub" class="h-12 w-12" /> -->
-            <img src="/svg/bitbucket.svg" alt="Bitbucket" class="h-12 w-12" />
+            <img src="/svg/bitbucket.svg" alt="Bitbucket" class="icon" />
           </div>
         </div>
 
@@ -45,12 +67,12 @@
         <div
           class="mt-4 text-left items-left bg-sand-light dark:bg-black py-micro pl-xx-small pr-medium text-p-small rounded-2xl border border-transparent w-64 sm:w-80"
         >
-          <p class="text-lg text-important font-bold">
+          <p class="text-sm sm:text-lg text-important font-bold">
             Run in your cloud or ours
           </p>
 
           <div
-            class="flex flex-wrap justify-left items-center mt-4 gap-x-2 sm:gap-x-7"
+            class="flex flex-wrap justify-left items-center mt-4 gap-x-4 sm:gap-x-6"
           >
             <svg
               width="48"
@@ -58,7 +80,7 @@
               viewBox="0 0 48 29"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              class="h-12 w-12"
+              class="icon"
             >
               <title>AWS</title>
               <path
@@ -80,7 +102,7 @@
               />
             </svg>
 
-            <img src="/svg/brands/gcp.svg" alt="GCP" class="h-12 w-12" />
+            <img src="/svg/brands/gcp.svg" alt="GCP" class="icon" />
           </div>
         </div>
       </div>
@@ -89,39 +111,39 @@
         <div
           class="mt-4 text-left items-left bg-sand-light dark:bg-black py-micro pl-xx-small pr-medium text-p-small rounded-2xl border border-transparent w-64 sm:w-80"
         >
-          <p class="text-lg text-important font-bold mb-4">
+          <p class="text-sm sm:text-lg text-important font-bold mb-4">
             Choose IDEs and editors
           </p>
 
           <div
             class="items-center grid grid-cols-4 gap-x-3 gap-y-2 sm:gap-x-4 sm:gap-y-6 w-56 sm:w-72"
           >
-            <img src="/svg/index/vscode.svg" alt="VS Code" class="h-12 w-12" />
-            <img src="/svg/index/goland.svg" alt="GoLand" class="h-12 w-12" />
+            <img src="/svg/index/vscode.svg" alt="VS Code" class="ide-icon" />
+            <img src="/svg/index/goland.svg" alt="GoLand" class="ide-icon" />
             <img
               src="/svg/index/intellij.svg"
               alt="IntelliJ"
-              class="h-12 w-12"
+              class="ide-icon"
             />
-            <img src="/svg/index/pycharm.svg" alt="PyCharm" class="h-12 w-12" />
+            <img src="/svg/index/pycharm.svg" alt="PyCharm" class="ide-icon" />
             <img
               src="/svg/index/phpstorm.svg"
               alt="PhpStorm"
-              class="h-12 w-12"
+              class="ide-icon"
             />
             <img
               src="/svg/index/webstorm.svg"
               alt="WebStorm"
-              class="h-12 w-12"
+              class="ide-icon"
             />
-            <img src="/svg/index/clion.svg" alt="CLion" class="h-12 w-12" />
+            <img src="/svg/index/clion.svg" alt="CLion" class="ide-icon" />
             <img
               src="/svg/index/rubymine.svg"
               alt="RubyMine"
-              class="h-12 w-12"
+              class="ide-icon"
             />
-            <img src="/svg/index/rider.svg" alt="Rider" class="h-12 w-12" />
-            <img src="/svg/index/vim.svg" alt="Vim" class="h-12 w-12" />
+            <img src="/svg/index/rider.svg" alt="Rider" class="ide-icon" />
+            <img src="/svg/index/vim.svg" alt="Vim" class="ide-icon" />
           </div>
         </div>
       </div>
@@ -130,32 +152,24 @@
         <div
           class="mt-4 text-left items-left bg-sand-light dark:bg-black py-micro pl-xx-small text-p-small rounded-2xl border border-transparent w-64 sm:w-80"
         >
-          <p class="text-lg text-important font-bold">
+          <p class="text-sm sm:text-lg text-important font-bold">
             Customize themes and extensions
           </p>
 
           <div
-            class="flex items-center mt-4 gap-y-2 sm:gap-y-0 gap-x-2 sm:gap-x-6 w-56 sm:w-72 mx-auto"
+            class="flex items-center mt-4 gap-x-4 sm:gap-x-6 w-56 sm:w-72 mx-auto"
           >
-            <img
-              src="/svg/brands/prettier.png"
-              alt="Prettier"
-              class="h-12 w-12"
-            />
+            <img src="/svg/brands/prettier.png" alt="Prettier" class="icon" />
             <img
               src="/svg/brands/copilot.png"
               alt="GitHub Copilot"
-              class="h-12 w-12"
+              class="icon"
             />
-            <img
-              src="/svg/brands/gitlens.png"
-              alt="GitLens"
-              class="h-12 w-12"
-            />
+            <img src="/svg/brands/gitlens.png" alt="GitLens" class="icon" />
             <img
               src="/svg/icons/more-options.svg"
               alt="More options"
-              class="h-12 w-12"
+              class="icon"
             />
           </div>
         </div>
@@ -164,22 +178,20 @@
         <div
           class="mt-4 text-left items-left bg-sand-light dark:bg-black py-micro pl-xx-small text-p-small rounded-2xl border border-transparent w-64 sm:w-80"
         >
-          <p class="text-lg text-important font-bold">
+          <p class="text-sm sm:text-lg text-important font-bold">
             Connect any dev resource
           </p>
 
-          <div
-            class="flex items-center mt-4 gap-y-2 sm:gap-y-0 gap-x-2 sm:gap-x-6 w-56 sm:w-72 mx-auto"
-          >
-            <img src="/svg/brands/redis.svg" alt="Redis" class="h-12 w-12" />
-            <img src="/svg/brands/aws-s3.png" alt="AWS S3" class="h-12 w-12" />
+          <div class="flex items-center mt-4 gap-x-4 sm:gap-x-6 mx-auto">
+            <img src="/svg/brands/redis.svg" alt="Redis" class="icon" />
+            <img src="/svg/brands/aws-s3.png" alt="AWS S3" class="icon" />
             <svg
               width="24"
               height="51"
               viewBox="0 0 24 51"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              class="h-12 w-12"
+              class="icon"
             >
               <title>MongoDB</title>
               <g clip-path="url(#clip0_9031_19699)">
@@ -203,7 +215,7 @@
             <img
               src="/svg/icons/more-options.svg"
               alt="More options"
-              class="h-12 w-12"
+              class="icon"
             />
           </div>
         </div>

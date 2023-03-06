@@ -47,11 +47,11 @@
   }}
   btnPrimary={{
     text: "Talk to an expert",
-    href: "/contact/get-demo",
+    href: "/contact/sales?subject=enterprise",
   }}
   btnSecondary={{
-    text: "Talk to an expert",
-    href: "/contact/sales?subject=enterprise",
+    text: "Get a demo",
+    href: "/contact/get-demo",
   }}
 />
 

@@ -25,9 +25,9 @@
   }}
 />
 
-<Section class="flex flex-col lg:flex-row">
+<div class="flex flex-col lg:flex-row sm:mt-x-large">
   <div
-    class="items-center justify-between max-w-7xl mx-auto mt-small mb-x-large md:my-x-large lg:mb-xxx-large"
+    class="items-center justify-between max-w-7xl mx-auto mt-small md:my-x-large"
   >
     <h2 class="h1 !mb-micro md:!mb-x-small max-w-xl">
       How Gitpod improves collaboration
@@ -38,17 +38,17 @@
   </div>
   <Quote
     quote="
-    With Gitpod, I can review any PR in a coding environment where I can edit, build and test the contribution, by just prepending <span class='text-dark-grey inline-block px-micro mt-macro bg-tertiary rounded-xl'><code>gitpod.io/#</code></span>"
+    With Gitpod, I can review any PR in a coding environment where I can edit, build and test the contribution, by just prepending <span class='text-dark-grey inline-block px-micro mt-macro bg-tertiary rounded-xl justify-center text-lg font-normal'><code>gitpod.io/#</code></span>"
     author={{
       name: "Johannes Schickling",
       jobTitle: "Co-founder at Prisma",
     }}
     svgClazz="h-20 w-20"
   />
-</Section>
-<Section>
+</div>
+<div class="mt-xxx-large mb-24 sm:mb-0">
   <AnimatedLogos />
-</Section>
+</div>
 <Section id="frictionless-collaboration">
   <h3 class="text-center text-3xl sm:text-5xl font-bold">
     Frictionless collaboration
@@ -61,14 +61,14 @@
       using Gitpod</a
     >.
   </p>
-  <div>
-    <Features features={collaborationFeatures} />
-  </div>
 </Section>
-<Testimonials
-  title="Trusted by the best developer teams"
-  text="Gitpod empowers teams to be always ready to code."
-  class="-mb-20"
-  {testimonials}
-/>
+<Features features={collaborationFeatures} class="!mt-x-large" />
+<Section>
+  <Testimonials
+    title="Trusted by the best developer teams"
+    text="Gitpod empowers teams to be always ready to code."
+    class="-mb-20"
+    {testimonials}
+  />
+</Section>
 <Explore />

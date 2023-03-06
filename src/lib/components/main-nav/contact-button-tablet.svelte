@@ -7,7 +7,7 @@
 </style>
 
 <a
-  href="/contact/sales?subject=enterprise"
+  href="/contact"
   on:click
   data-analytics={`{"context":"navbar"}`}
   class="hidden sm:inline no-underline text-sm">Contact</a

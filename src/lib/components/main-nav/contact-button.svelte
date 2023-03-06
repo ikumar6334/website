@@ -5,7 +5,7 @@
 <ul>
   <NavItem
     navItem={{
-      href: "/contact/sales?subject=enterprise",
+      href: "/contact",
       label: "Contact",
       isExternal: false,
     }}
