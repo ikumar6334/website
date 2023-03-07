@@ -25,3 +25,9 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 import "@testing-library/cypress/add-commands";
+
+import "cypress-axe";
+
+Cypress.Commands.add("configureAxe", () => {
+  cy.injectAxe();
+});
